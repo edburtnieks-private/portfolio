@@ -5,12 +5,12 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Edgar Burtnieks - Front End Developer',
+  siteName: 'Edgar Burtnieks',
   plugins: [
     {
       use: 'gridsome-plugin-netlify-cms',
       options: {
-        publicPath: `/admin`,
+        publicPath: '/admin',
       },
     },
   ],
