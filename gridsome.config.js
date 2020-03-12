@@ -13,5 +13,12 @@ module.exports = {
         publicPath: '/admin',
       },
     },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Project',
+        path: 'content/projects/**/*.md',
+      },
+    },
   ],
 };
