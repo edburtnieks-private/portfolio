@@ -11,7 +11,7 @@ collections:
     files:
       - name: 'site'
         label: 'Site'
-        file: 'content/site.yml'
+        file: 'src/content/site.yml'
         fields:
           - {
               label: 'Home Page Title',
@@ -26,7 +26,7 @@ collections:
           - { label: 'E-mail', name: 'email', widget: 'string' }
   - name: 'projects'
     label: 'Projects'
-    folder: 'projects'
+    folder: 'src/content/projects'
     create: true
     slug: '{{slug}}'
     fields:

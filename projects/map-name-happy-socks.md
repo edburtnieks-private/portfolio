@@ -1,4 +1,0 @@
----
-name: Happy Socks
----
-
