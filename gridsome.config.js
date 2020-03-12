@@ -13,12 +13,5 @@ module.exports = {
         publicPath: '/admin',
       },
     },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'yaml',
-        path: './content/**/*.yml',
-      },
-    },
   ],
 };
