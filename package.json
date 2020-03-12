@@ -10,5 +10,9 @@
     "gridsome": "^0.7.0",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "netlify-cms": "^2.10.28"
+  },
+  "devDependencies": {
+    "@gridsome/source-filesystem": "^0.6.2",
+    "js-yaml": "^3.13.1"
   }
 }

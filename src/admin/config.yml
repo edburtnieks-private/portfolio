@@ -6,13 +6,28 @@ media_folder: 'static/uploads'
 public_folder: '/uploads'
 
 collections:
-  - name: 'posts'
-    label: 'Posts'
-    folder: 'posts'
+  - name: 'site'
+    label: 'Site'
+    files:
+      - name: 'site'
+        label: 'Site'
+        file: 'content/site.yml'
+        fields:
+          - {
+              label: 'Home Page Title',
+              name: 'homePageTitle',
+              widget: 'string',
+            }
+          - {
+              label: 'Home Page Subtitle',
+              name: 'homePageSubtitle',
+              widget: 'string',
+            }
+          - { label: 'E-mail', name: 'email', widget: 'string' }
+  - name: 'projects'
+    label: 'Projects'
+    folder: 'projects'
     create: true
     slug: '{{slug}}'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Excerpt', name: 'excerpt', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'date' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Name', name: 'name', widget: 'string' }
