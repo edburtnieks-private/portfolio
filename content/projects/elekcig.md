@@ -1,4 +1,4 @@
 ---
-name: Elekcig Test
+name: Elekcig
 ---
 
