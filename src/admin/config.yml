@@ -6,10 +6,24 @@ media_folder: 'static/uploads'
 public_folder: '/uploads'
 
 collections:
-  - name: 'projects'
-    label: 'Projects'
-    folder: 'content/projects'
+  - name: 'examples'
+    label: 'Examples'
+    folder: 'content/examples'
     create: true
     slug: '{{slug}}'
     fields:
       - { label: 'Name', name: 'name', widget: 'string' }
+      - {
+          label: 'Live site',
+          name: 'liveSite',
+          widget: 'string',
+          required: false,
+          default: '',
+        }
+      - {
+          label: 'Source',
+          name: 'source',
+          widget: 'string',
+          required: false,
+          default: '',
+        }

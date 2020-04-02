@@ -1,26 +1,37 @@
 <template>
   <Layout>
-    <h1>
-      <div>Front End Developer</div>
-      <div>Currently looking for development opportunities (relocation preferred)</div>
-    </h1>
-
-    <h2>Projects</h2>
-
-    <ul>
-      <li v-for="project in $page.projects.edges" :key="project.node.id">
-        <h3 v-text="project.node.name" />
-      </li>
-    </ul>
+    <Hero />
+    <Examples :examples="$page.examples.edges" />
+    <Skills />
   </Layout>
 </template>
 
+<script>
+import Container from "~/containers/Container";
+import Section from "~/containers/Section";
+import Hero from "~/components/Sections/Hero";
+import Examples from "~/components/Sections/Examples";
+import Skills from "~/components/Sections/Skills";
+
+export default {
+  components: {
+    Container,
+    Section,
+    Hero,
+    Examples,
+    Skills
+  }
+};
+</script>
+
 <page-query>
 query {
-  projects: allProject {
+  examples: allExample {
     edges {
       node {
         name
+        liveSite
+        source
       }
     }
   }
