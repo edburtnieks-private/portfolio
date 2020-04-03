@@ -2,9 +2,9 @@
   <header class="header">
     <Logo class="logo" />
 
-    <MenuButton class="menu-button" />
+    <MenuButton @toggle-menu="onToggleMenu" class="menu-button" />
 
-    <div class="navigation-container">
+    <div ref="menu" class="navigation-container">
       <Navigation class="navigation" />
     </div>
   </header>
@@ -20,6 +20,12 @@ export default {
     Logo,
     Navigation,
     MenuButton
+  },
+  methods: {
+    onToggleMenu() {
+      this.$refs.menu.classList.toggle("active");
+      document.body.classList.toggle("overlay");
+    }
   }
 };
 </script>
@@ -41,6 +47,18 @@ export default {
 
 .navigation-container {
   display: none;
+
+  &.active {
+    display: block;
+    position: fixed;
+    top: 1.9rem;
+
+    .navigation {
+      background-color: #353535;
+      border-radius: 0.5rem;
+      padding: 0 1rem;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -67,7 +85,7 @@ export default {
   .navigation {
     background-color: #353535;
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     position: relative;
 
     &::before {

@@ -1,5 +1,5 @@
 <template>
-  <button class="menu-button" aria-label="Menu">
+  <button @click="$emit('toggle-menu')" class="menu-button" aria-label="Menu">
     <MenuIcon />
   </button>
 </template>

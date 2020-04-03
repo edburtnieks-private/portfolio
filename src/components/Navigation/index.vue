@@ -50,21 +50,12 @@ export default {
   padding: 0;
 }
 
-.navigation-list-item + .navigation-list-item {
-  margin-top: 1rem;
-}
-
 .link {
+  display: block;
+  padding: 1rem 0;
+
   &::after {
     border-bottom: none;
-  }
-
-  &:hover {
-    outline: 0;
-
-    &::after {
-      border-bottom: 2px dotted;
-    }
   }
 }
 
@@ -75,6 +66,27 @@ export default {
 .external-link-icon {
   height: 12px;
   margin-left: 0.5rem;
+  transform: translateY(1rem);
   width: 12px;
+}
+
+@media (min-width: 768px) {
+  .link {
+    display: inline-block;
+    padding: 0.5rem 0;
+
+    &:hover {
+      outline: 0;
+
+      &::after {
+        border-bottom: 2px dotted;
+        bottom: 0.25rem;
+      }
+    }
+  }
+
+  .external-link-icon {
+    transform: translateY(0.5rem);
+  }
 }
 </style>
