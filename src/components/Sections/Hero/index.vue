@@ -30,57 +30,13 @@ export default {
 
 <style lang="scss">
 .hero-section-container {
-  animation: hero-slide-in 0.7s ease-in-out;
-  position: relative;
-
-  &::before,
-  &::after {
-    background-color: #313131;
-    border-radius: 1rem;
-    content: "";
-    left: -3rem;
-    position: absolute;
-    right: 0;
-    top: 1rem;
-  }
-
-  &::before {
-    bottom: 0;
-    z-index: 1;
-  }
-
-  &::after {
-    bottom: -8rem;
-    z-index: -1;
-  }
-}
-
-.hero-section {
-  align-items: flex-start;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-
-  &::before {
-    background-color: #4d9de0;
-    border-radius: 50%;
-    content: "";
-    height: 2rem;
-    left: -4rem;
-    position: absolute;
-    top: 0.2rem;
-    width: 2rem;
-    z-index: 1;
-  }
-}
-
-.hero-title-container {
-  z-index: 2;
+  animation: hero-fade-in 0.7s ease-in-out;
+  background-color: #313131;
 }
 
 .hero-title {
   font-size: 1.5rem;
-  position: relative;
+  margin-bottom: 3rem;
 }
 
 .hero-subtitle {
@@ -90,14 +46,69 @@ export default {
   margin-top: 1rem;
 }
 
-.hero-email {
-  display: inline-block;
-  margin-top: 3rem;
-}
-
 @media (min-width: 768px) {
+  .hero-section-container {
+    animation: hero-slide-in 0.7s ease-in-out;
+    background-color: transparent;
+    position: relative;
+
+    &::before,
+    &::after {
+      background-color: #313131;
+      border-radius: 1rem;
+      content: "";
+      left: -3rem;
+      position: absolute;
+      right: 5rem;
+      top: 2rem;
+    }
+
+    &::before {
+      bottom: 0;
+      z-index: 1;
+    }
+
+    &::after {
+      bottom: -8rem;
+    }
+  }
+
+  .hero-section {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      background-color: #4d9de0;
+      border-radius: 50%;
+      content: "";
+      height: 2rem;
+      left: 23rem;
+      position: absolute;
+      top: -1rem;
+      width: 2rem;
+    }
+  }
+
   .hero-title {
     font-size: 2rem;
+  }
+}
+
+@media (min-width: 1056px) {
+  .hero-section-container {
+    &::before,
+    &::after {
+      right: 0;
+    }
+  }
+}
+
+@keyframes hero-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

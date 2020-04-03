@@ -33,16 +33,10 @@ export default {
   z-index: 2;
 }
 
-.logo {
-  animation: logo-slide-in 0.7s 0.3s ease-in-out forwards;
-  opacity: 0;
-  transform: translateX(-100%);
-}
-
 .menu-button {
   padding: 1rem;
   position: fixed;
-  right: 1rem;
+  right: 2rem;
 }
 
 .navigation-container {
@@ -50,6 +44,12 @@ export default {
 }
 
 @media (min-width: 768px) {
+  .logo {
+    animation: logo-slide-in 0.7s 0.3s ease-in-out forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
   .menu-button {
     display: none;
   }
@@ -60,9 +60,8 @@ export default {
     justify-content: flex-end;
     opacity: 0;
     position: fixed;
+    right: 2rem;
     top: 7rem;
-    transform: translateX(-3rem);
-    z-index: 1;
   }
 
   .navigation {
@@ -76,9 +75,9 @@ export default {
       border-radius: 50%;
       content: "";
       height: 0.8rem;
-      left: -0.2rem;
       position: absolute;
-      top: -0.2rem;
+      right: 1rem;
+      top: 1rem;
       width: 0.8rem;
     }
   }
@@ -86,6 +85,8 @@ export default {
 
 @media (min-width: 1056px) {
   .navigation-container {
+    right: auto;
+    transform: translateX(-3rem);
     width: 1024px;
   }
 }

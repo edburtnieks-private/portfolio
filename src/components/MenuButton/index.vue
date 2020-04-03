@@ -16,7 +16,7 @@ export default {
 
 <style scoped>
 .menu-button {
-  background-color: var(--c-dark);
+  background-color: #353535;
   border-radius: 0.5rem;
   display: flex;
 }
