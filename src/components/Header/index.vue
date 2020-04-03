@@ -2,7 +2,12 @@
   <header class="header">
     <Logo class="logo" />
 
-    <MenuButton @toggle-menu="onToggleMenu" class="menu-button" />
+    <MenuButton
+      ref="menuButton"
+      @toggle-menu="onToggleMenu"
+      :active="isNavigationActive"
+      class="menu-button"
+    />
 
     <div ref="menu" class="navigation-container">
       <Navigation class="navigation" />
@@ -21,9 +26,15 @@ export default {
     Navigation,
     MenuButton
   },
+  data() {
+    return {
+      isNavigationActive: false
+    };
+  },
   methods: {
     onToggleMenu() {
       this.$refs.menu.classList.toggle("active");
+      this.isNavigationActive = !this.isNavigationActive;
       document.body.classList.toggle("overlay");
     }
   }

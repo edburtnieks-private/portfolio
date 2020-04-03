@@ -1,15 +1,24 @@
 <template>
   <button @click="$emit('toggle-menu')" class="menu-button" aria-label="Menu">
-    <MenuIcon />
+    <CloseIcon v-if="active" />
+    <MenuIcon v-else />
   </button>
 </template>
 
 <script>
 import MenuIcon from "~/assets/icons/Menu";
+import CloseIcon from "~/assets/icons/Close";
 
 export default {
   components: {
-    MenuIcon
+    MenuIcon,
+    CloseIcon
+  },
+  props: {
+    active: {
+      type: Boolean,
+      required: true
+    }
   }
 };
 </script>
