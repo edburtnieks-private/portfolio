@@ -8,10 +8,7 @@
         >Currently looking for development opportunities in Riga or remotely.</div>
       </h1>
 
-      <a
-        href="mailto:edburtnieks@gmail.com"
-        class="hero-email"
-      >Write me an email (edburtnieks@gmail.com)</a>
+      <a href="mailto:edburtnieks@gmail.com">Write me an email (edburtnieks@gmail.com)</a>
     </div>
   </Section>
 </template>
