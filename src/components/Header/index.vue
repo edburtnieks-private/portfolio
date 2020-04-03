@@ -24,15 +24,19 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .header {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
-  z-index: 1;
+  animation: logo-slide-in 0.7s 0.3s ease-in-out forwards;
+  opacity: 0;
+  transform: translateX(-100%);
 }
 
 .menu-button {
@@ -51,9 +55,13 @@ export default {
   }
 
   .navigation-container {
-    display: block;
+    animation: navigation-fade-in 1s 1.3s ease-in-out forwards;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
     position: fixed;
-    right: 1rem;
+    top: 7rem;
+    transform: translateX(-3rem);
     z-index: 1;
   }
 
@@ -61,18 +69,44 @@ export default {
     background-color: #353535;
     border-radius: 0.5rem;
     padding: 1rem;
+    position: relative;
+
+    &::before {
+      background-color: #cee4f6;
+      border-radius: 50%;
+      content: "";
+      height: 0.8rem;
+      left: -0.2rem;
+      position: absolute;
+      top: -0.2rem;
+      width: 0.8rem;
+    }
   }
 }
 
 @media (min-width: 1056px) {
   .navigation-container {
-    right: auto;
-    text-align: right;
-    width: 1040px;
+    width: 1024px;
   }
+}
 
-  .navigation {
-    display: inline-block;
+@keyframes logo-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes navigation-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>

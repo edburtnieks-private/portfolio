@@ -10,6 +10,6 @@ export default function(Vue, { head }) {
 
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@400;700&display=swap',
+    href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap',
   });
 }

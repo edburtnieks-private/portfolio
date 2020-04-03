@@ -1,9 +1,7 @@
 <template>
   <Container>
-    <section>
+    <section :class="sectionClass">
       <h2 v-if="title" v-text="title" class="title" />
-      <slot v-else name="title" />
-
       <slot />
     </section>
   </Container>
@@ -17,6 +15,9 @@ export default {
     Container
   },
   props: {
+    sectionClass: {
+      type: String
+    },
     title: {
       type: String
     }

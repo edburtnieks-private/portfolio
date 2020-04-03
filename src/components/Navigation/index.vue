@@ -1,15 +1,25 @@
 <template>
   <nav class="navigation">
-    <g-link to="/" class="link-wrapper link">Home</g-link>
-    <a href="#examples" class="link-wrapper link">Examples</a>
-    <a href="#skills" class="link-wrapper link">Skills</a>
-    <!-- <g-link to="/blog" class="link-wrapper">Blog</g-link>
-    <g-link to="/learning" class="link-wrapper">Learning</g-link>-->
-    <!-- <g-link to="/about" class="link-wrapper">About Me</g-link> -->
-    <span class="link-wrapper external-link">
-      <a href="https://github.com/edburtnieks" target="_blank" class="link">GitHub</a>
-      <ExternalLinkIcon class="external-link-icon" />
-    </span>
+    <ul class="navigation-list">
+      <li class="navigation-list-item">
+        <g-link to="/blog" class="link">Blog</g-link>
+      </li>
+      <li class="navigation-list-item">
+        <g-link to="/learning" class="link">Learning</g-link>
+      </li>
+      <li class="navigation-list-item">
+        <g-link to="/about" class="link">About Me</g-link>
+      </li>
+      <li class="navigation-list-item">
+        <g-link to="/personal-projects" class="link">Personal projects</g-link>
+      </li>
+      <li class="navigation-list-item">
+        <span class="external-link">
+          <a href="https://github.com/edburtnieks" target="_blank" class="link">GitHub</a>
+          <ExternalLinkIcon class="external-link-icon" />
+        </span>
+      </li>
+    </ul>
   </nav>
 </template>
 
@@ -30,8 +40,13 @@ export default {
   font-size: 0.875rem;
 }
 
-.link-wrapper + .link-wrapper {
-  margin-left: 2rem;
+.navigation-list {
+  list-style: none;
+  padding: 0;
+}
+
+.navigation-list-item + .navigation-list-item {
+  margin-top: 1rem;
 }
 
 .link {

@@ -5,7 +5,6 @@
 
   // Font family
   --ff-body: 'Montserrat', sans-serif;
-  --ff-heading: 'Comfortaa', cursive;
 
   // Font weight
   --fw-regular: 400;
@@ -40,12 +39,6 @@ body {
   cursor: default;
   font-family: var(--ff-body);
   overflow-x: hidden;
-}
-
-h1,
-h2,
-h3 {
-  font-family: var(--ff-heading);
 }
 
 a {

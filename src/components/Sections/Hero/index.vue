@@ -1,43 +1,36 @@
 <template>
-  <Section class="hero-section">
-    <template v-slot:title>
-      <h1 class="title">
+  <Section class="hero-section-container" sectionClass="hero-section">
+    <div class="hero-title-container">
+      <h1 class="hero-title">
         <div>Full Stack Designer</div>
-        <div class="subtitle">Currently available for development opportunities in Riga or remotely.</div>
+        <div
+          class="hero-subtitle"
+        >Currently looking for development opportunities in Riga or remotely.</div>
       </h1>
-    </template>
 
-    <a href="mailto:edburtnieks@gmail.com" class="email">edburtnieks@gmail.com</a>
-
-    <nav>
-      <ul>
-        <li>
-          <g-link to="/blog" class="link-wrapper">Blog</g-link>
-        </li>
-        <li>
-          <g-link to="/learning" class="link-wrapper">Learning</g-link>
-        </li>
-        <li>
-          <g-link to="/about" class="link-wrapper">About Me</g-link>
-        </li>
-      </ul>
-    </nav>
+      <a
+        href="mailto:edburtnieks@gmail.com"
+        class="hero-email"
+      >Write me an email (edburtnieks@gmail.com)</a>
+    </div>
   </Section>
 </template>
 
 <script>
 import Section from "~/containers/Section";
+import ExternalLinkIcon from "~/assets/icons/ExternalLink";
 
 export default {
   components: {
-    Section
+    Section,
+    ExternalLinkIcon
   }
 };
 </script>
 
-<style lang="scss" scoped>
-.hero-section {
-  animation: slide-in 0.7s ease-in-out;
+<style lang="scss">
+.hero-section-container {
+  animation: hero-slide-in 0.7s ease-in-out;
   position: relative;
 
   &::before,
@@ -53,6 +46,7 @@ export default {
 
   &::before {
     bottom: 0;
+    z-index: 1;
   }
 
   &::after {
@@ -61,34 +55,59 @@ export default {
   }
 }
 
-.title {
+.hero-section {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::before {
+    background-color: #4d9de0;
+    border-radius: 50%;
+    content: "";
+    height: 2rem;
+    left: -4rem;
+    position: absolute;
+    top: 0.2rem;
+    width: 2rem;
+    z-index: 1;
+  }
+}
+
+.hero-title-container {
+  z-index: 2;
+}
+
+.hero-title {
   font-size: 1.5rem;
   position: relative;
 }
 
-.subtitle {
+.hero-subtitle {
   font-family: var(--ff-body);
   font-size: 1rem;
   font-weight: var(--fw-regular);
   margin-top: 1rem;
 }
 
-.email {
+.hero-email {
   display: inline-block;
   margin-top: 3rem;
 }
 
 @media (min-width: 768px) {
-  .title {
+  .hero-title {
     font-size: 2rem;
   }
 }
 
-@keyframes slide-in {
+@keyframes hero-slide-in {
   0% {
+    opacity: 0;
     transform: translateX(100%);
   }
   100% {
+    opacity: 1;
     transform: translateX(0);
   }
 }
