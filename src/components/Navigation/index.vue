@@ -15,7 +15,12 @@
       </li>
       <li class="navigation-list-item">
         <span class="external-link">
-          <a href="https://github.com/edburtnieks" target="_blank" class="link">GitHub</a>
+          <a
+            href="https://github.com/edburtnieks"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link"
+          >GitHub</a>
           <ExternalLinkIcon class="external-link-icon" />
         </span>
       </li>

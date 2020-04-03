@@ -2,7 +2,7 @@
   <div>
     <h3 v-text="example.node.name" class="title" />
     <span v-if="example.node.liveSite" class="link-wrapper">
-      <a :href="example.node.liveSite" target="_blank">Live site</a>
+      <a :href="example.node.liveSite" target="_blank" rel="noopener noreferrer">Live site</a>
       <ExternalLinkIcon class="external-link-icon" />
     </span>
 
@@ -10,6 +10,7 @@
       v-if="example.node.source"
       :href="example.node.source"
       target="_blank"
+      rel="noopener noreferrer"
       class="link"
     >Source code</a>
   </div>
