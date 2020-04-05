@@ -104,9 +104,9 @@ export default {
       border-radius: 50%;
       content: "";
       height: 0.8rem;
+      left: -0.4rem;
       position: absolute;
-      right: 1rem;
-      top: 1rem;
+      top: 0.4rem;
       width: 0.8rem;
     }
   }

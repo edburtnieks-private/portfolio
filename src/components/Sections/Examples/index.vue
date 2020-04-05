@@ -1,7 +1,7 @@
 <template>
   <Section
     id="examples"
-    title="Examples"
+    title="Projects"
     class="examples-section-container"
     sectionClass="examples-section"
   >

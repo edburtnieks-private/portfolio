@@ -2,18 +2,6 @@
   <nav class="navigation">
     <ul class="navigation-list">
       <li class="navigation-list-item">
-        <g-link to="/blog" class="link">Blog</g-link>
-      </li>
-      <li class="navigation-list-item">
-        <g-link to="/learning" class="link">Learning</g-link>
-      </li>
-      <li class="navigation-list-item">
-        <g-link to="/about" class="link">About Me</g-link>
-      </li>
-      <li class="navigation-list-item">
-        <g-link to="/personal-projects" class="link">Personal projects</g-link>
-      </li>
-      <li class="navigation-list-item">
         <span class="external-link">
           <a
             href="https://github.com/edburtnieks"
