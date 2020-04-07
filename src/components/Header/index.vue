@@ -1,6 +1,10 @@
 <template>
   <header class="header">
-    <Logo class="logo" />
+    <transition v-if="hasHeaderAnimation" name="logo-slide-fade-in" appear>
+      <Logo />
+    </transition>
+
+    <Logo v-else />
 
     <MenuButton
       ref="menuButton"
@@ -9,7 +13,13 @@
       class="menu-button"
     />
 
-    <div ref="menu" class="navigation-container">
+    <transition v-if="hasHeaderAnimation" name="navigation-fade-in" appear>
+      <div ref="menu" class="navigation-container">
+        <Navigation class="navigation" />
+      </div>
+    </transition>
+
+    <div v-else ref="menu" class="navigation-container">
       <Navigation class="navigation" />
     </div>
   </header>
@@ -25,6 +35,12 @@ export default {
     Logo,
     Navigation,
     MenuButton
+  },
+  props: {
+    hasHeaderAnimation: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
@@ -73,21 +89,13 @@ export default {
 }
 
 @media (min-width: 768px) {
-  .logo {
-    animation: logo-slide-in 0.7s 0.3s ease-in-out forwards;
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-
   .menu-button {
     display: none;
   }
 
   .navigation-container {
-    animation: navigation-fade-in 1s 1.3s ease-in-out forwards;
     display: flex;
     justify-content: flex-end;
-    opacity: 0;
     position: fixed;
     right: 2rem;
     top: 7rem;
@@ -97,18 +105,23 @@ export default {
     background-color: #353535;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
-    position: relative;
+  }
 
-    &::before {
-      background-color: #cee4f6;
-      border-radius: 50%;
-      content: "";
-      height: 0.8rem;
-      left: -0.4rem;
-      position: absolute;
-      top: 0.4rem;
-      width: 0.8rem;
-    }
+  .navigation-fade-in-enter {
+    opacity: 0;
+  }
+
+  .navigation-fade-in-enter-active {
+    transition: opacity 1s ease-in-out 1.3s;
+  }
+
+  .logo-slide-fade-in-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  .logo-slide-fade-in-enter-active {
+    transition: all 0.7s ease-in-out 0.3s;
   }
 }
 
@@ -117,26 +130,6 @@ export default {
     right: auto;
     transform: translateX(-3rem);
     width: 1024px;
-  }
-}
-
-@keyframes logo-slide-in {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes navigation-fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 </style>

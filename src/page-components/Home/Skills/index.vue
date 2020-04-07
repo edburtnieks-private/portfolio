@@ -1,17 +1,19 @@
 <template>
-  <Section
-    id="skills"
-    title="Skills"
-    class="skills-section-container"
-    sectionClass="skills-section"
-  >
-    <div class="skills-wrapper">
-      <SkillList title="Development" :skills="developmentSkills" class="skill-list" />
-      <SkillList title="Development Tools" :skills="developmentTools" class="skill-list" />
-      <SkillList title="Design" :skills="designSkills" class="skill-list" />
-      <SkillList title="Design Tools" :skills="designTools" class="skill-list" />
-    </div>
-  </Section>
+  <transition name="skills-slide-fade-in" appear>
+    <Section
+      id="skills"
+      title="Skills"
+      class="skills-section-container"
+      sectionClass="skills-section"
+    >
+      <div class="skills-wrapper">
+        <SkillList title="Development" :skills="developmentSkills" class="skill-list" />
+        <SkillList title="Development Tools" :skills="developmentTools" class="skill-list" />
+        <SkillList title="Design" :skills="designSkills" class="skill-list" />
+        <SkillList title="Design Tools" :skills="designTools" class="skill-list" />
+      </div>
+    </Section>
+  </transition>
 </template>
 
 <script>
@@ -55,9 +57,12 @@ export default {
 </script>
 
 <style lang="scss">
-.skills-section-container {
-  animation: skills-fade-in 0.7s 0.5s ease-in-out forwards;
+.skills-slide-fade-in-enter {
   opacity: 0;
+}
+
+.skills-slide-fade-in-enter-active {
+  transition: opacity 0.7s ease-in-out 0.6s;
 }
 
 .skills-wrapper {
@@ -67,12 +72,6 @@ export default {
 }
 
 @media (min-width: 768px) {
-  .skills-section-container {
-    animation: skills-slide-up 0.7s 0.5s ease-in-out forwards;
-    opacity: 0;
-    transform: translateY(100%);
-  }
-
   .skills-section {
     position: relative;
 
@@ -87,25 +86,14 @@ export default {
       width: 1rem;
     }
   }
-}
 
-@keyframes skills-fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes skills-slide-up {
-  0% {
+  .skills-slide-fade-in-enter {
     opacity: 0;
     transform: translateY(100%);
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+
+  .skills-slide-fade-in-enter-active {
+    transition: all 0.7s ease-in-out 0.6s;
   }
 }
 </style>

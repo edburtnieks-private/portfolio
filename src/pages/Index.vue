@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout hasHeaderAnimation>
     <Hero />
     <Examples :examples="$page.examples.edges" />
     <Skills />
@@ -7,15 +7,13 @@
 </template>
 
 <script>
-import Container from "~/containers/Container";
 import Section from "~/containers/Section";
-import Hero from "~/components/Sections/Hero";
-import Examples from "~/components/Sections/Examples";
-import Skills from "~/components/Sections/Skills";
+import Hero from "~/page-components/Home/Hero";
+import Examples from "~/page-components/Home/Examples";
+import Skills from "~/page-components/Home/Skills";
 
 export default {
   components: {
-    Container,
     Section,
     Hero,
     Examples,

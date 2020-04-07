@@ -1,16 +1,18 @@
 <template>
-  <Section class="hero-section-container" sectionClass="hero-section">
-    <div class="hero-title-container">
-      <h1 class="hero-title">
-        <div>Full Stack Designer</div>
-        <div
-          class="hero-subtitle"
-        >Currently looking for development opportunities in Riga or remotely.</div>
-      </h1>
+  <transition name="hero-slide-fade-in" appear>
+    <Section class="hero-section-container" sectionClass="hero-section">
+      <div class="hero-title-container">
+        <h1 class="hero-title">
+          <div>Full Stack Designer</div>
+          <div
+            class="hero-subtitle"
+          >Currently looking for development opportunities in Riga or remotely.</div>
+        </h1>
 
-      <a href="mailto:edburtnieks@gmail.com">Write me an email (edburtnieks@gmail.com)</a>
-    </div>
-  </Section>
+        <a href="mailto:edburtnieks@gmail.com">Write me an email (edburtnieks@gmail.com)</a>
+      </div>
+    </Section>
+  </transition>
 </template>
 
 <script>
@@ -27,7 +29,6 @@ export default {
 
 <style lang="scss">
 .hero-section-container {
-  animation: hero-fade-in 0.7s ease-in-out;
   background-color: #313131;
 }
 
@@ -43,9 +44,16 @@ export default {
   margin-top: 1rem;
 }
 
+.hero-slide-fade-in-enter {
+  opacity: 0;
+}
+
+.hero-slide-fade-in-enter-active {
+  transition: opacity 0.7s ease-in-out;
+}
+
 @media (min-width: 768px) {
   .hero-section-container {
-    animation: hero-slide-in 0.7s ease-in-out;
     background-color: transparent;
     position: relative;
 
@@ -89,6 +97,15 @@ export default {
   .hero-title {
     font-size: 2rem;
   }
+
+  .hero-slide-fade-in-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  .hero-slide-fade-in-enter-active {
+    transition: all 0.7s ease-in-out;
+  }
 }
 
 @media (min-width: 1056px) {
@@ -97,26 +114,6 @@ export default {
     &::after {
       right: 0;
     }
-  }
-}
-
-@keyframes hero-fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes hero-slide-in {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
 </style>

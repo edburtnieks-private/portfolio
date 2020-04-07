@@ -6,7 +6,6 @@
 
 <style scoped>
 .container {
-  margin: 0;
   padding: 3rem var(--s-mobile);
 }
 
@@ -18,9 +17,11 @@
 
 @media (min-width: 1056px) {
   .container {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 1024px;
     padding: 4rem 0;
+    width: 100%;
   }
 }
 </style>

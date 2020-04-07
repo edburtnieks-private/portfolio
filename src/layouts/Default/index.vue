@@ -1,14 +1,14 @@
 <template>
   <div>
     <Container>
-      <Header />
+      <Header :hasHeaderAnimation="hasHeaderAnimation" />
     </Container>
 
     <main>
       <slot />
     </main>
 
-    <Container>
+    <Container class="page-footer-wrapper">
       <Footer />
     </Container>
   </div>
@@ -24,6 +24,21 @@ export default {
     Container,
     Header,
     Footer
+  },
+  props: {
+    hasHeaderAnimation: {
+      type: Boolean,
+      default: false
+    }
+  },
+  mounted() {
+    document.body.classList.remove("overlay");
   }
 };
 </script>
+
+<style lang="scss">
+.page-footer-wrapper {
+  margin-top: auto;
+}
+</style>
