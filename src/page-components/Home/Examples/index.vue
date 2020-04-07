@@ -34,11 +34,11 @@ export default {
   background-color: #353535;
 }
 
-.examples-slide-fade-in-enter {
+.enter-animation .examples-slide-fade-in-enter {
   opacity: 0;
 }
 
-.examples-slide-fade-in-enter-active {
+.enter-animation .examples-slide-fade-in-enter-active {
   transition: opacity 0.7s ease-in-out 0.3s;
 }
 
@@ -74,12 +74,12 @@ export default {
     }
   }
 
-  .examples-slide-fade-in-enter {
+  .enter-animation .examples-slide-fade-in-enter {
     opacity: 0;
     transform: translateX(-100%);
   }
 
-  .examples-slide-fade-in-enter-active {
+  .enter-animation .examples-slide-fade-in-enter-active {
     transition: all 0.7s ease-in-out 0.3s;
   }
 }

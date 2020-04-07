@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Container>
-      <h1>Learning</h1>
+      <h1>Examples</h1>
     </Container>
   </Layout>
 </template>

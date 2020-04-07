@@ -107,21 +107,21 @@ export default {
     padding: 0.5rem 1rem;
   }
 
-  .navigation-fade-in-enter {
-    opacity: 0;
+  .enter-animation .logo-slide-fade-in-enter {
+  opacity: 0;
+  transform: translateX(-100%);
   }
 
-  .navigation-fade-in-enter-active {
-    transition: opacity 1s ease-in-out 1.3s;
-  }
-
-  .logo-slide-fade-in-enter {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-
-  .logo-slide-fade-in-enter-active {
+  .enter-animation .logo-slide-fade-in-enter-active {
     transition: all 0.7s ease-in-out 0.3s;
+  }
+
+  .enter-animation .navigation-fade-in-enter {
+    opacity: 0;
+  }
+
+  .enter-animation .navigation-fade-in-enter-active {
+    transition: opacity 1s ease-in-out 1.3s;
   }
 }
 

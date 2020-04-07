@@ -57,18 +57,18 @@ export default {
 </script>
 
 <style lang="scss">
-.skills-slide-fade-in-enter {
-  opacity: 0;
-}
-
-.skills-slide-fade-in-enter-active {
-  transition: opacity 0.7s ease-in-out 0.6s;
-}
-
 .skills-wrapper {
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.enter-animation .skills-slide-fade-in-enter {
+  opacity: 0;
+}
+
+.enter-animation .skills-slide-fade-in-enter-active {
+  transition: opacity 0.7s ease-in-out 0.6s;
 }
 
 @media (min-width: 768px) {
@@ -87,12 +87,12 @@ export default {
     }
   }
 
-  .skills-slide-fade-in-enter {
+  .enter-animation .skills-slide-fade-in-enter {
     opacity: 0;
     transform: translateY(100%);
   }
 
-  .skills-slide-fade-in-enter-active {
+  .enter-animation .skills-slide-fade-in-enter-active {
     transition: all 0.7s ease-in-out 0.6s;
   }
 }

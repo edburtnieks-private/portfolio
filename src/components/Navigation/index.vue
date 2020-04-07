@@ -6,7 +6,7 @@
       </li>
 
       <li class="navigation-list-item">
-        <g-link to="/learning/" class="link">Learning</g-link>
+        <g-link to="/examples/" class="link">Examples</g-link>
       </li>
 
       <li class="navigation-list-item">
