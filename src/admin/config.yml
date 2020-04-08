@@ -7,7 +7,7 @@ public_folder: '/uploads'
 
 collections:
   - name: 'examples'
-    label: 'Examples'
+    label: 'Example'
     folder: 'content/examples'
     create: true
     slug: '{{slug}}'
@@ -27,3 +27,13 @@ collections:
           required: false,
           default: '',
         }
+  - name: 'frontend-mentor-challenges'
+    label: 'Frontend Mentor Challenge'
+    folder: 'content/frontend-mentor-challenges'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Link', name: 'link', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Image Alt', name: 'imageAlt', widget: 'string' }

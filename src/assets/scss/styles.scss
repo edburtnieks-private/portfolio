@@ -20,6 +20,12 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#app {
+  height: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -31,6 +37,10 @@ h3,
 p,
 ul {
   margin: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
 }
 
 body {
@@ -54,6 +64,11 @@ body {
       z-index: 1;
     }
   }
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -97,5 +112,11 @@ button {
   &:focus {
     outline: 2px dotted;
     outline-offset: 2px;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2rem;
   }
 }

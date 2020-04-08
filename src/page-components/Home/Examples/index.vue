@@ -1,12 +1,14 @@
 <template>
-  <Section
-    id="examples"
-    title="Projects contributed to"
-    class="examples-section-container"
-    sectionClass="examples-section"
-  >
-    <ExampleList :examples="examples" />
-  </Section>
+  <transition name="examples-slide-fade-in" appear>
+    <Section
+      id="examples"
+      title="Projects contributed to"
+      class="examples-section-container"
+      sectionClass="examples-section"
+    >
+      <ExampleList :examples="examples" />
+    </Section>
+  </transition>
 </template>
 
 <script>
@@ -29,18 +31,21 @@ export default {
 
 <style lang="scss">
 .examples-section-container {
-  animation: examples-fade-in 0.7s 0.3s ease-in-out forwards;
   background-color: #353535;
+}
+
+.enter-animation .examples-slide-fade-in-enter {
   opacity: 0;
+}
+
+.enter-animation .examples-slide-fade-in-enter-active {
+  transition: opacity 0.7s ease-in-out 0.3s;
 }
 
 @media (min-width: 768px) {
   .examples-section-container {
-    animation: examples-slide-in 0.7s 0.3s ease-in-out forwards;
     background-color: transparent;
-    opacity: 0;
     position: relative;
-    transform: translateX(-100%);
 
     &::before {
       background-color: #353535;
@@ -68,32 +73,21 @@ export default {
       width: 1.5rem;
     }
   }
+
+  .enter-animation .examples-slide-fade-in-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  .enter-animation .examples-slide-fade-in-enter-active {
+    transition: all 0.7s ease-in-out 0.3s;
+  }
 }
 
 @media (min-width: 1240px) {
   .examples-section::before {
     left: -5rem;
     top: 3rem;
-  }
-}
-
-@keyframes examples-fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes examples-slide-in {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
 </style>

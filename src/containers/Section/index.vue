@@ -1,5 +1,5 @@
 <template>
-  <Container>
+  <Container withPadding>
     <section :class="sectionClass">
       <h2 v-if="title" v-text="title" class="title" />
       <slot />

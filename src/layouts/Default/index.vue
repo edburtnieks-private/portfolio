@@ -1,14 +1,14 @@
 <template>
   <div>
-    <Container>
-      <Header />
+    <Container withPadding>
+      <Header :class="{ 'home-page-header': home }" :home="home" />
     </Container>
 
     <main>
       <slot />
     </main>
 
-    <Container>
+    <Container withPadding class="page-footer-wrapper">
       <Footer />
     </Container>
   </div>
@@ -24,6 +24,25 @@ export default {
     Container,
     Header,
     Footer
+  },
+  props: {
+    home: {
+      type: Boolean,
+      default: false
+    }
+  },
+  mounted() {
+    document.body.classList.remove("overlay");
   }
 };
 </script>
+
+<style lang="scss">
+.home-page-header {
+  z-index: 2;
+}
+
+.page-footer-wrapper {
+  margin-top: auto;
+}
+</style>
