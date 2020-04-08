@@ -8,18 +8,32 @@ module.exports = {
   siteName: 'Edgar Burtnieks',
   plugins: [
     {
-      use: 'gridsome-plugin-netlify-cms',
-      options: {
-        publicPath: '/admin',
-      },
-    },
-    {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Example',
         path: 'content/examples/**/*.md',
       },
     },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'FrontendMentorChallenge',
+        path: 'content/frontend-mentor-challenges/**/*.md',
+      },
+    },
+    {
+      use: 'gridsome-plugin-netlify-cms',
+      options: {
+        publicPath: '/admin',
+      },
+    },
+    {
+      use: 'gridsome-plugin-netlify-cms-paths',
+      options: {
+        contentTypes: ['FrontendMentorChallenge'],
+        coverField: 'image',
+      },
+    }
   ],
   chainWebpack: (config) => {
     // https://stackoverflow.com/a/57097106

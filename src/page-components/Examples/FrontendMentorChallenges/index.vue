@@ -10,38 +10,19 @@
 
     <Container class="examples-container">
       <ul class="examples-list">
-        <li class="examples-list-item">
-          <g-link
-            to="/examples/frontend-mentor-challenges/job-listings-with-filtering"
-            class="example"
-          >
+        <li
+          v-for="example in $static.frontendMentorChallenges.edges"
+          :key="example.node.id"
+          class="examples-list-item"
+        >
+          <g-link :to="example.node.link" class="example">
             <g-image
-              src="~/assets/images/job-listings-with-filtering-preview.jpg"
-              alt="Job listings with filtering preview"
+              :src="example.node.image"
+              :alt="example.node.imageAlt"
               class="example-image"
             />
             <div class="overlay">
-              <h2 class="example-title">Job listings with filtering</h2>
-              <small class="explore">
-                Explore
-                <ChevronRight />
-              </small>
-            </div>
-          </g-link>
-        </li>
-
-        <li class="examples-list-item">
-          <g-link
-            to="/examples/frontend-mentor-challenges/four-card-feature-section"
-            class="example"
-          >
-            <g-image
-              src="~/assets/images/four-card-feature-section-preview.jpg"
-              alt="Four card feature section preview"
-              class="example-image"
-            />
-            <div class="overlay">
-              <h2 class="example-title">Four card feature section</h2>
+              <h2 class="example-title" v-text="example.node.title" />
               <small class="explore">
                 Explore
                 <ChevronRight />
@@ -91,7 +72,7 @@ export default {
 
 .examples-list-item,
 .example,
-.example-image {
+.g-image--loaded {
   height: 100%;
 }
 
@@ -170,3 +151,19 @@ export default {
   }
 }
 </style>
+
+<static-query>
+query {
+  frontendMentorChallenges: allFrontendMentorChallenge {
+    edges {
+      node {
+        id
+        title
+        link
+        image
+        imageAlt
+      }
+    }
+  }
+}
+</static-query>

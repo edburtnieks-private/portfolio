@@ -25,7 +25,7 @@ export default function(Vue, { head, router }) {
           component: ExamplesPage,
         },
         {
-          path: 'frontend-mentor-challenges',
+          path: 'fm',
           component: FrontendMentorChallengesPage,
           meta: {
             breadcrumbText: 'Frontend Mentor Challenges'
