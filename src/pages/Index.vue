@@ -20,11 +20,14 @@ export default {
     Skills
   },
   beforeRouteEnter(to, from, next) {
-    if (from.path === "/") {
-      document.body.classList.add("enter-animation");
-    } else {
-      document.body.classList.remove("enter-animation");
+    if (process.env.VUE_ENV === 'client') {
+      if (from.path === "/") {
+        document.body.classList.add("enter-animation");
+      } else {
+        document.body.classList.remove("enter-animation");
+      }
     }
+
     next();
   }
 };
