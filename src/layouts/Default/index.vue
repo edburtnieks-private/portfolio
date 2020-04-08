@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Container>
+    <Container withPadding>
       <Header :class="{ 'home-page-header': home }" :home="home" />
     </Container>
 
@@ -8,7 +8,7 @@
       <slot />
     </main>
 
-    <Container class="page-footer-wrapper">
+    <Container withPadding class="page-footer-wrapper">
       <Footer />
     </Container>
   </div>

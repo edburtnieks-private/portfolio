@@ -20,7 +20,7 @@ export default {
             to: breadcrumbArray[index - 1]
               ? `/${breadcrumbArray[index - 1].path}/${path}/`
               : `/${path}/`,
-            text: this.$route.matched[index].name || path
+            text: this.$route.matched[index].meta.breadcrumbText || path
           });
         }
 
@@ -36,9 +36,9 @@ export default {
 <style lang="scss" scoped>
 .breadcrumb-list {
   display: flex;
+  flex-wrap: wrap;
   font-size: 0.8rem;
   list-style: none;
-  margin-bottom: 2rem;
   padding: 0;
 }
 

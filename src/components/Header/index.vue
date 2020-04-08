@@ -69,6 +69,7 @@ export default {
   padding: 1rem;
   position: fixed;
   right: 2rem;
+  z-index: 1;
 }
 
 .navigation-container {
@@ -78,6 +79,7 @@ export default {
     display: block;
     position: fixed;
     top: 1.9rem;
+    z-index: 1;
 
     .navigation {
       background-color: #353535;
@@ -98,6 +100,7 @@ export default {
     position: fixed;
     right: 2rem;
     top: 7rem;
+    z-index: 1;
   }
 
   .navigation {
@@ -126,9 +129,10 @@ export default {
 
 @media (min-width: 1056px) {
   .navigation-container {
+    margin-left: calc(1024px - 110px);
     right: auto;
     transform: translateX(-3rem);
-    width: 1024px;
+    width: 110px;
   }
 }
 </style>

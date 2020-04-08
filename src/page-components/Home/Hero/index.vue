@@ -33,7 +33,6 @@ export default {
 }
 
 .hero-title {
-  font-size: 1.5rem;
   margin-bottom: 3rem;
 }
 
@@ -92,10 +91,6 @@ export default {
       top: -1rem;
       width: 2rem;
     }
-  }
-
-  .hero-title {
-    font-size: 2rem;
   }
 
   .enter-animation .hero-slide-fade-in-enter {

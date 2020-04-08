@@ -14,18 +14,22 @@ export default function(Vue, { head, router }) {
   // Add routes with breadcrumbs
   router.addRoutes([
     {
-      name: 'Examples',
       path: '/examples/',
       component: Examples,
+      meta: {
+        breadcrumbText: 'Examples'
+      },
       children: [
         {
           path: '',
           component: ExamplesPage,
         },
         {
-          name: 'Frontend Mentor Challenges',
           path: 'frontend-mentor-challenges',
           component: FrontendMentorChallengesPage,
+          meta: {
+            breadcrumbText: 'Frontend Mentor Challenges'
+          },
         },
       ],
     },
