@@ -1,7 +1,7 @@
 <template>
   <div>
     <Container>
-      <Header :hasHeaderAnimation="hasHeaderAnimation" />
+      <Header :class="{ 'home-page-header': home }" :home="home" />
     </Container>
 
     <main>
@@ -26,7 +26,7 @@ export default {
     Footer
   },
   props: {
-    hasHeaderAnimation: {
+    home: {
       type: Boolean,
       default: false
     }
@@ -38,6 +38,10 @@ export default {
 </script>
 
 <style lang="scss">
+.home-page-header {
+  z-index: 2;
+}
+
 .page-footer-wrapper {
   margin-top: auto;
 }

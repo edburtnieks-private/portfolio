@@ -1,9 +1,7 @@
 <template>
-  <Layout>
-    <Container>
-      <h1>Examples</h1>
-    </Container>
-  </Layout>
+  <Container>
+    <h1>Examples</h1>
+  </Container>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <Layout hasHeaderAnimation>
+  <Layout home>
     <Hero />
     <Examples :examples="$page.examples.edges" />
     <Skills />
@@ -25,7 +25,6 @@ export default {
     } else {
       document.body.classList.remove("enter-animation");
     }
-
     next();
   }
 };

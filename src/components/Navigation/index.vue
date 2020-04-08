@@ -2,7 +2,7 @@
   <nav class="navigation">
     <ul class="navigation-list">
       <li class="navigation-list-item">
-        <g-link to="/" class="link">Home</g-link>
+        <g-link to="/" exact class="link">Home</g-link>
       </li>
 
       <li class="navigation-list-item">
@@ -50,7 +50,7 @@ export default {
   display: block;
   padding: 1rem 0;
 
-  &.active--exact::before {
+  &.active::before {
     background-color: #cee4f6;
     border-radius: 50%;
     content: "";
@@ -82,7 +82,7 @@ export default {
     display: inline-block;
     padding: 0.5rem 0;
 
-    &.active--exact::before {
+    &.active::before {
       top: 0.6rem;
     }
 

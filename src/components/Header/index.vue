@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <transition v-if="hasHeaderAnimation" name="logo-slide-fade-in" appear>
+    <transition v-if="home" name="logo-slide-fade-in" appear>
       <Logo />
     </transition>
 
@@ -13,7 +13,7 @@
       class="menu-button"
     />
 
-    <transition v-if="hasHeaderAnimation" name="navigation-fade-in" appear>
+    <transition v-if="home" name="navigation-fade-in" appear>
       <div ref="menu" class="navigation-container">
         <Navigation class="navigation" />
       </div>
@@ -37,7 +37,7 @@ export default {
     MenuButton
   },
   props: {
-    hasHeaderAnimation: {
+    home: {
       type: Boolean,
       default: false
     }
@@ -63,7 +63,6 @@ export default {
   display: flex;
   justify-content: space-between;
   position: relative;
-  z-index: 2;
 }
 
 .menu-button {
