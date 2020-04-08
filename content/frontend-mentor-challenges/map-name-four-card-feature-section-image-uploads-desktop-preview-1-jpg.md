@@ -1,5 +1,5 @@
 ---
 name: Four card feature section
-image: /uploads/desktop-preview-1-.jpg
+image: static/images/four-card-feature-section-preview.jpg
 ---
 
