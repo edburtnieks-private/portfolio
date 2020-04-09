@@ -1,6 +1,6 @@
 <template>
   <ul class="breadcrumb-list">
-    <li v-for="item in breadcrumbs" :key="item.path" class="breadcrumb-list-item">
+    <li v-for="item in items" :key="item.path" class="breadcrumb-list-item">
       <g-link :to="item.to" class="link">{{item.text}}</g-link>
     </li>
   </ul>
@@ -8,26 +8,10 @@
 
 <script>
 export default {
-  computed: {
-    breadcrumbs() {
-      let pathArray = this.$route.path.split("/");
-      pathArray.shift();
-
-      let breadcrumbs = pathArray.reduce((breadcrumbArray, path, index) => {
-        if (this.$route.matched[index]) {
-          breadcrumbArray.push({
-            path,
-            to: breadcrumbArray[index - 1]
-              ? `/${breadcrumbArray[index - 1].path}/${path}/`
-              : `/${path}/`,
-            text: this.$route.matched[index].meta.breadcrumbText || path
-          });
-        }
-
-        return breadcrumbArray;
-      }, []);
-
-      return breadcrumbs;
+  props: {
+    items: {
+      type: Array,
+      required: true
     }
   }
 };
@@ -42,10 +26,13 @@ export default {
   padding: 0;
 }
 
-.breadcrumb-list-item + .breadcrumb-list-item::before {
-  content: url("../../../static/icons/chevron-right.svg?inline");
-  padding: 0 0.5rem;
-  vertical-align: middle;
+.breadcrumb-list-item {
+  display: flex;
+
+  &:not(:last-child)::after {
+    content: url("../../../static/icons/chevron-right.svg?inline");
+    padding: 0 0.5rem;
+  }
 }
 
 .link {

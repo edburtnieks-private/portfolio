@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <Layout>
     <Container>
       <h1>Examples</h1>
     </Container>
@@ -11,7 +11,7 @@
         </li>
       </ul>
     </Container>
-  </div>
+  </Layout>
 </template>
 
 <script>

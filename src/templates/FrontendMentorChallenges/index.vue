@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <Layout>
     <Container class="breadcrumbs">
-      <Breadcrumbs />
+      <Breadcrumbs :items="$context.breadcrumbs" />
     </Container>
 
     <Container class="title">
@@ -11,16 +11,12 @@
     <Container class="examples-container">
       <ul class="examples-list">
         <li
-          v-for="example in $static.frontendMentorChallenges.edges"
+          v-for="example in $page.frontendMentorChallenges.edges"
           :key="example.node.id"
           class="examples-list-item"
         >
           <g-link :to="example.node.link" class="example">
-            <g-image
-              :src="example.node.image"
-              :alt="example.node.imageAlt"
-              class="example-image"
-            />
+            <g-image :src="example.node.image" :alt="example.node.imageAlt" class="example-image" />
             <div class="overlay">
               <h2 class="example-title" v-text="example.node.title" />
               <small class="explore">
@@ -32,7 +28,7 @@
         </li>
       </ul>
     </Container>
-  </div>
+  </Layout>
 </template>
 
 <script>
@@ -152,7 +148,7 @@ export default {
 }
 </style>
 
-<static-query>
+<page-query>
 query {
   frontendMentorChallenges: allFrontendMentorChallenge {
     edges {
@@ -166,4 +162,4 @@ query {
     }
   }
 }
-</static-query>
+</page-query>
