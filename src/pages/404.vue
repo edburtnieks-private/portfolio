@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <Container class="page-not-found-container">
+    <Container withPadding class="page-not-found-container">
       <h1>404 - Page Not Found</h1>
     </Container>
   </Layout>
