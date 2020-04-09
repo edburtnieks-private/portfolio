@@ -63,11 +63,11 @@ export default {
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 
-.enter-animation .skills-slide-fade-in-enter {
+.skills-slide-fade-in-enter {
   opacity: 0;
 }
 
-.enter-animation .skills-slide-fade-in-enter-active {
+.skills-slide-fade-in-enter-active {
   transition: opacity 0.7s ease-in-out 0.6s;
 }
 
@@ -87,12 +87,12 @@ export default {
     }
   }
 
-  .enter-animation .skills-slide-fade-in-enter {
+  .skills-slide-fade-in-enter {
     opacity: 0;
     transform: translateY(100%);
   }
 
-  .enter-animation .skills-slide-fade-in-enter-active {
+  .skills-slide-fade-in-enter-active {
     transition: all 0.7s ease-in-out 0.6s;
   }
 }

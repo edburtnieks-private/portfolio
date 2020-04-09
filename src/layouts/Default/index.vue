@@ -4,9 +4,11 @@
       <Header :class="{ 'home-page-header': home }" :home="home" />
     </Container>
 
-    <main>
-      <slot />
-    </main>
+    <transition name="main-fade-in" appear>
+      <main>
+        <slot />
+      </main>
+    </transition>
 
     <Container withPadding class="page-footer-wrapper">
       <Footer />
@@ -44,5 +46,13 @@ export default {
 
 .page-footer-wrapper {
   margin-top: auto;
+}
+
+.main-fade-in-enter-active {
+  transition: opacity 0.5s;
+}
+
+.main-fade-in-enter {
+  opacity: 0;
 }
 </style>

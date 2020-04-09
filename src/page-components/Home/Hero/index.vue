@@ -43,11 +43,11 @@ export default {
   margin-top: 1rem;
 }
 
-.enter-animation .hero-slide-fade-in-enter {
+.hero-slide-fade-in-enter {
   opacity: 0;
 }
 
-.enter-animation .hero-slide-fade-in-enter-active {
+.hero-slide-fade-in-enter-active {
   transition: opacity 0.7s ease-in-out;
 }
 
@@ -93,12 +93,12 @@ export default {
     }
   }
 
-  .enter-animation .hero-slide-fade-in-enter {
+  .hero-slide-fade-in-enter {
     opacity: 0;
     transform: translateX(100%);
   }
 
-  .enter-animation .hero-slide-fade-in-enter-active {
+  .hero-slide-fade-in-enter-active {
     transition: all 0.7s ease-in-out;
   }
 }
