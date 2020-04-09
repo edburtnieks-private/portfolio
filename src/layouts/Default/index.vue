@@ -5,7 +5,7 @@
     </Container>
 
     <transition name="main-fade-in" appear>
-      <main class="page-main-content">
+      <main>
         <slot />
       </main>
     </transition>
@@ -42,10 +42,6 @@ export default {
 <style lang="scss">
 .home-page-header {
   z-index: 2;
-}
-
-.page-main-content {
-  height: 100%;
 }
 
 .page-footer-wrapper {
