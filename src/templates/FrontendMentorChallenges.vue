@@ -52,11 +52,17 @@ export default {
 }
 
 .breadcrumbs {
-  margin-bottom: 1rem;
+  @media (min-width: 768px) {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .title {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    margin-bottom: 3rem;
+  }
 }
 
 .examples-list {

@@ -20,13 +20,20 @@ export default {
 <style lang="scss" scoped>
 .breadcrumb-list {
   display: flex;
-  flex-wrap: wrap;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   list-style: none;
+  overflow-x: auto;
   padding: 0;
+  white-space: nowrap;
+
+  @media (min-width: 768px) {
+    font-size: 0.8rem;
+  }
 }
 
 .breadcrumb-list-item {
+  align-items: center;
+  backface-visibility: hidden;
   display: flex;
 
   &:not(:last-child)::after {
@@ -36,6 +43,12 @@ export default {
 }
 
 .link {
+  padding: 0.5rem 0;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+
   &::after {
     border-bottom: none;
   }
