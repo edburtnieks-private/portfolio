@@ -7,7 +7,7 @@
     <Container class="examples">
       <ul>
         <li>
-          <g-link to="/examples/fm/">Frontend Mentor Challenges</g-link>
+          <g-link to="/examples/fm-challenges/">Frontend Mentor Challenges</g-link>
         </li>
       </ul>
     </Container>

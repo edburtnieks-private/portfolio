@@ -45,6 +45,7 @@ export default {
 
     &::after {
       border-bottom: 2px dotted;
+      bottom: 0;
     }
   }
 }

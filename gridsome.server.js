@@ -14,8 +14,8 @@ module.exports = function(api) {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
 
     createPage({
-      path: '/examples/fm',
-      component: './src/templates/FrontendMentorChallenges/index.vue',
+      path: '/examples/fm-challenges',
+      component: './src/templates/FrontendMentorChallenges.vue',
       context: {
         breadcrumbs: [
           {
@@ -24,8 +24,8 @@ module.exports = function(api) {
             text: 'Examples',
           },
           {
-            path: 'examples/fm',
-            to: '/examples/fm/',
+            path: 'examples/fm-challenges',
+            to: '/examples/fm-challenges/',
             text: 'Frontend Mentor Challenges',
           },
         ],
