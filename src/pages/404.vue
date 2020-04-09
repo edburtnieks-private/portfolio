@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <Container withPadding class="page-not-found-container">
+    <Container withPadding>
       <h1>404 - Page Not Found</h1>
     </Container>
   </Layout>
@@ -15,10 +15,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.page-not-found-container {
-  display: flex;
-  justify-content: center;
-}
-</style>
