@@ -5,13 +5,3 @@
     </Container>
   </Layout>
 </template>
-
-<script>
-import Container from "~/containers/Container";
-
-export default {
-  components: {
-    Container
-  }
-};
-</script>

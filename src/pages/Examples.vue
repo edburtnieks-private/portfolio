@@ -14,16 +14,6 @@
   </Layout>
 </template>
 
-<script>
-import Container from "~/containers/Container";
-
-export default {
-  components: {
-    Container
-  }
-};
-</script>
-
 <style scoped>
 .examples {
   margin-top: 2rem;

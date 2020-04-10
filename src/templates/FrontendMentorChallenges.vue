@@ -32,13 +32,11 @@
 </template>
 
 <script>
-import Container from "~/containers/Container";
 import Breadcrumbs from "~/components/Breadcrumbs";
 import ChevronRight from "~/assets/icons/ChevronRight";
 
 export default {
   components: {
-    Container,
     Breadcrumbs,
     ChevronRight
   }
