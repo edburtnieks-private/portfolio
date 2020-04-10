@@ -12,28 +12,24 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
-      - { label: 'Name', name: 'name', widget: 'string' }
-      - {
-          label: 'Live site',
-          name: 'liveSite',
-          widget: 'string',
-          required: false,
-          default: '',
-        }
-      - {
-          label: 'Source',
-          name: 'source',
-          widget: 'string',
-          required: false,
-          default: '',
-        }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Live site', name: 'liveSite', widget: 'string', required: false, default: '' }
+      - { label: 'Source', name: 'source', widget: 'string', required: false, default: '' }
   - name: 'frontend-mentor-challenges'
     label: 'Frontend Mentor Challenge'
     folder: 'content/frontend-mentor-challenges'
     create: true
-    slug: '{{slug}}'
+    slug: '{{fields.slug}}'
     fields:
+      - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Link', name: 'link', widget: 'string' }
+      - { label: 'Links', name: 'links', widget: 'boolean', default: true }
+      - { label: 'Challenge link', name: 'challengeLink', widget: 'string' }
+      - { label: 'Solution link', name: 'solutionLink', widget: 'string' }
+      - { label: 'Live site link', name: 'liveSiteLink', widget: 'string' }
+      - { label: 'GitHub repository', name: 'gitHubRepositoryLink', widget: 'string' }
+      - { label: 'Technology stack', name: 'technologyStack', widget: 'list' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Image Alt', name: 'imageAlt', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

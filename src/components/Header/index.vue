@@ -10,7 +10,7 @@
       ref="menuButton"
       @toggle-menu="onToggleMenu"
       :active="isNavigationActive"
-      class="menu-button"
+      :class="['menu-button', { active: isNavigationActive }]"
     />
 
     <transition v-if="home" name="navigation-fade-in" appear>
@@ -70,6 +70,10 @@ export default {
   position: fixed;
   right: 2rem;
   z-index: 1;
+
+  &.active {
+    z-index: 3;
+  }
 }
 
 .navigation-container {
@@ -79,7 +83,7 @@ export default {
     display: block;
     position: fixed;
     top: 1.9rem;
-    z-index: 1;
+    z-index: 2;
 
     .navigation {
       background-color: #353535;
@@ -110,8 +114,8 @@ export default {
   }
 
   .logo-slide-fade-in-enter {
-  opacity: 0;
-  transform: translateX(-100%);
+    opacity: 0;
+    transform: translateX(-100%);
   }
 
   .logo-slide-fade-in-enter-active {

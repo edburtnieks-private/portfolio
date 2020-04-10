@@ -28,6 +28,7 @@ export default {
 
   @media (min-width: 768px) {
     font-size: 0.8rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -46,6 +47,7 @@ export default {
   padding: 0.5rem 0;
 
   @media (min-width: 768px) {
+    height: 100%;
     padding: 0;
   }
 
@@ -53,12 +55,17 @@ export default {
     border-bottom: none;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     outline: 0;
 
     &::after {
       border-bottom: 2px dotted;
-      bottom: 0;
+      bottom: 4px;
+
+      @media (min-width: 768px) {
+        bottom: 0;
+      }
     }
   }
 }

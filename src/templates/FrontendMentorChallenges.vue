@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <Container class="breadcrumbs">
+    <Container>
       <Breadcrumbs :items="$context.breadcrumbs" />
     </Container>
 
@@ -49,12 +49,6 @@ export default {
 .examples-container {
   padding-left: 0;
   padding-right: 0;
-}
-
-.breadcrumbs {
-  @media (min-width: 768px) {
-    margin-bottom: 0.5rem;
-  }
 }
 
 .title {
