@@ -11,31 +11,36 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Example',
-        path: 'content/examples/**/*.md',
-      },
+        path: 'content/examples/**/*.md'
+      }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'FrontendMentorChallenge',
-        path: 'content/frontend-mentor-challenges/**/*.md',
-      },
+        path: 'content/frontend-mentor-challenges/**/*.md'
+      }
     },
     {
       use: 'gridsome-plugin-netlify-cms',
       options: {
-        publicPath: '/admin',
-      },
+        publicPath: '/admin'
+      }
     },
     {
       use: 'gridsome-plugin-netlify-cms-paths',
       options: {
         contentTypes: ['FrontendMentorChallenge'],
-        coverField: 'image',
-      },
+        coverField: 'image'
+      }
     }
   ],
-  chainWebpack: (config) => {
+  transformers: {
+    remark: {
+      plugins: ['@gridsome/remark-prismjs']
+    }
+  },
+  chainWebpack: config => {
     // https://stackoverflow.com/a/57097106
     const svgRule = config.module.rule('svg');
     svgRule.uses.clear();
@@ -49,5 +54,5 @@ module.exports = {
       .oneOf('external')
       .use('vue-svg-loader')
       .loader('vue-svg-loader');
-  },
+  }
 };
