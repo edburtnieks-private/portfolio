@@ -1,6 +1,8 @@
 ---
+slug: four-card-feature-section
 title: Four card feature section
 link: /examples/fm-challenges/four-card-feature-section/
+links: true
 challengeLink: 'https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK'
 solutionLink: >-
   https://www.frontendmentor.io/solutions/html-and-css-only-mobile-first-site-BkEHB-6z

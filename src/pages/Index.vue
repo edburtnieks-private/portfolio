@@ -27,7 +27,7 @@ query {
   examples: allExample {
     edges {
       node {
-        name
+        title
         liveSite
         source
       }

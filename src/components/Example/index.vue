@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 v-text="example.node.name" class="title" />
+    <h3 v-text="example.node.title" class="title" />
     <span v-if="example.node.liveSite" class="link-wrapper">
       <a :href="example.node.liveSite" target="_blank" rel="noopener noreferrer">Live site</a>
       <ExternalLinkIcon class="external-link-icon" />

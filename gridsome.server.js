@@ -10,9 +10,10 @@ module.exports = function(api) {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
   });
 
-  api.createPages(({ createPage }) => {
+  api.createPages(async ({ graphql, createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
 
+    // Examples pages
     createPage({
       path: '/examples/fm-challenges',
       component: './src/templates/FrontendMentorChallenges.vue',
@@ -30,6 +31,48 @@ module.exports = function(api) {
           },
         ],
       },
+    });
+
+    // Frontend Mentor Challenges pages
+    const { data } = await graphql(`
+      {
+        frontendMentorChallenges: allFrontendMentorChallenge {
+          edges {
+            node {
+              id
+              slug
+              title
+            }
+          }
+        }
+      }
+    `);
+
+    data.frontendMentorChallenges.edges.forEach(({ node }) => {
+      createPage({
+        path: `/examples/fm-challenges/${node.slug}`,
+        component: './src/templates/FrontendMentorChallenge.vue',
+        context: {
+          id: node.id,
+          breadcrumbs: [
+            {
+              path: 'examples',
+              to: '/examples/',
+              text: 'Examples',
+            },
+            {
+              path: 'examples/fm-challenges',
+              to: '/examples/fm-challenges/',
+              text: 'Frontend Mentor Challenges',
+            },
+            {
+              path: `examples/fm-challenges/${node.slug}`,
+              to: `/examples/fm-challenges/${node.slug}/`,
+              text: node.title,
+            },
+          ],
+        },
+      });
     });
   });
 };

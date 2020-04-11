@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <Container class="breadcrumbs">
+    <Container>
       <Breadcrumbs :items="$context.breadcrumbs" />
     </Container>
 
@@ -32,13 +32,11 @@
 </template>
 
 <script>
-import Container from "~/containers/Container";
 import Breadcrumbs from "~/components/Breadcrumbs";
 import ChevronRight from "~/assets/icons/ChevronRight";
 
 export default {
   components: {
-    Container,
     Breadcrumbs,
     ChevronRight
   }
@@ -49,12 +47,6 @@ export default {
 .examples-container {
   padding-left: 0;
   padding-right: 0;
-}
-
-.breadcrumbs {
-  @media (min-width: 768px) {
-    margin-bottom: 0.5rem;
-  }
 }
 
 .title {
