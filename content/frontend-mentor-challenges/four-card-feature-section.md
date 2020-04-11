@@ -16,6 +16,7 @@ technologyStack:
 image: /uploads/four-card-feature-section-preview.jpg
 imageAlt: Four card feature section preview
 ---
+
 The main goals for this challenge was to make pixel perfect implementation of the given design, utilize CSS grid for positioning cards and making sure the design is responsive using mobile first approach.
 
 Here is the finished result.
