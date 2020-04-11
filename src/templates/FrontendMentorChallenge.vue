@@ -119,6 +119,7 @@ export default {
   top: 0.5rem;
   transform: translateX(-0.5rem);
   transition: transform 0.3s ease-in-out;
+  width: max-content;
 
   @media (min-width: 649px) {
     display: none;
