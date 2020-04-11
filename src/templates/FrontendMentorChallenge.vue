@@ -100,7 +100,7 @@ export default {
 
     &.active {
       transform: translateX(0);
-      z-index: 2;
+      z-index: 3;
 
       .show-info-button {
         transform: translateX(0);

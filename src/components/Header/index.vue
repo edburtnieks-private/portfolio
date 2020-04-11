@@ -62,14 +62,17 @@ export default {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  position: relative;
+
+  @media (min-width: 768px) {
+    position: relative;
+  }
 }
 
 .menu-button {
   padding: 1rem;
   position: fixed;
   right: 2rem;
-  z-index: 1;
+  z-index: 2;
 
   &.active {
     z-index: 3;
@@ -83,7 +86,7 @@ export default {
     display: block;
     position: fixed;
     top: 1.9rem;
-    z-index: 2;
+    z-index: 3;
 
     .navigation {
       background-color: #353535;

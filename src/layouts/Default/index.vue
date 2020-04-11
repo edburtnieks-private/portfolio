@@ -39,7 +39,7 @@ export default {
 
 <style lang="scss">
 .home-page-header {
-  z-index: 2;
+  z-index: 3;
 }
 
 .page-footer-wrapper {
