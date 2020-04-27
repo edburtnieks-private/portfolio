@@ -16,10 +16,4 @@ export default function(Vue, { head, router }) {
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'
   });
-
-  head.meta.push({
-    name: 'description',
-    content:
-      'Art oriented full stack designer located in Riga with passion for music, solo traveling, coffee, spirituality, self awareness and discovery'
-  });
 }

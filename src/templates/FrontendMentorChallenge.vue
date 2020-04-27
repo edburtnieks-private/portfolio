@@ -37,6 +37,11 @@ import Content from "~/page-components/FrontendMentorChallenge/Content";
 import ChevronRightIcon from "~/assets/icons/ChevronRight";
 
 export default {
+  metaInfo() {
+    return {
+      title: this.$page.frontendMentorChallenge.title
+    };
+  },
   components: {
     Breadcrumbs,
     Title,

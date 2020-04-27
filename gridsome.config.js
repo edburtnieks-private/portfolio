@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Edgar Burtnieks',
+  siteDescription: 'Art oriented and mostly self thought front end developer / full stack designer with passion for music, solo traveling, coffee and self discovery.',
   plugins: [
     {
       use: '@gridsome/source-filesystem',

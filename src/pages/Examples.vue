@@ -19,3 +19,11 @@
   margin-top: 2rem;
 }
 </style>
+
+<script>
+export default {
+  metaInfo: {
+    title: "Examples",
+  },
+};
+</script>

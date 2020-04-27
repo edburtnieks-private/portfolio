@@ -39,7 +39,7 @@ export default {
       ],
       developmentTools: [
         "Git",
-        "Linux",
+        "Unix",
         "Node",
         "Gulp",
         "Webpack",

@@ -13,6 +13,9 @@ import Examples from "~/page-components/Home/Examples";
 import Skills from "~/page-components/Home/Skills";
 
 export default {
+  metaInfo: {
+    title: "Full Stack Designer / Frontend Developer"
+  },
   components: {
     Section,
     Hero,

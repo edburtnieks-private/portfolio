@@ -36,6 +36,9 @@ import Breadcrumbs from "~/components/Breadcrumbs";
 import ChevronRight from "~/assets/icons/ChevronRight";
 
 export default {
+  metaInfo: {
+    title: "Frontend Mentor Challenges"
+  },
   components: {
     Breadcrumbs,
     ChevronRight

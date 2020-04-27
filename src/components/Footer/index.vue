@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <a href="mailto:edburtnieks@gmail.com">Write me an email (edburtnieks@gmail.com)</a>
-    <small class="copyright">&copy; Copyright 2020, Edgar Burtnieks</small>
+    <small class="copyright">&copy; Copyright 2020, {{ $static.metadata.siteName }}</small>
   </footer>
 </template>
 
@@ -23,3 +23,11 @@
   }
 }
 </style>
+
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
