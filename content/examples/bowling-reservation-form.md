@@ -38,3 +38,10 @@ After I had an idea about the business, I wanted to prepare possible proposal re
 3. How can I help business (for this specific example I decided to focus on creating online reservation form)
 
 ![Proposal research](/uploads/bowling-reservation-form-proposal-research.png)
+
+### 3. Content strategy
+
+### 3.1. Competitor research
+
+![Proposal research](/uploads/bowling-reservation-form-content-strategy-competitor-research.png)
+
