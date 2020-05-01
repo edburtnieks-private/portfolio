@@ -2,7 +2,7 @@
   <transition name="examples-slide-fade-in" appear>
     <Section
       id="examples"
-      title="Projects contributed to"
+      title="Examples"
       class="examples-section-container"
       sectionClass="examples-section"
     >

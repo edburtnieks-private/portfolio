@@ -15,6 +15,57 @@ module.exports = function(api) {
 
     // Examples pages
     createPage({
+      path: '/examples',
+      component: './src/templates/Examples.vue',
+      context: {
+        breadcrumbs: [
+          {
+            path: 'examples',
+            to: '/examples/',
+            text: 'Examples',
+          },
+        ],
+      },
+    });
+
+    const { data: examplesData } = await graphql(`
+      {
+        examples: allExample {
+          edges {
+            node {
+              id
+              slug
+              title
+            }
+          }
+        }
+      }
+    `);
+
+    examplesData.examples.edges.forEach(({ node }) => {
+      createPage({
+        path: `/examples/${node.slug}`,
+        component: './src/templates/Example.vue',
+        context: {
+          id: node.id,
+          breadcrumbs: [
+            {
+              path: 'examples',
+              to: '/examples/',
+              text: 'Examples',
+            },
+            {
+              path: `examples/${node.slug}`,
+              to: `/examples/${node.slug}/`,
+              text: node.title,
+            },
+          ],
+        },
+      });
+    });
+
+    // Frontend Mentor Challenges pages
+    createPage({
       path: '/examples/fm-challenges',
       component: './src/templates/FrontendMentorChallenges.vue',
       context: {
@@ -33,8 +84,7 @@ module.exports = function(api) {
       },
     });
 
-    // Frontend Mentor Challenges pages
-    const { data } = await graphql(`
+    const { data: frontendMentorChallengesData } = await graphql(`
       {
         frontendMentorChallenges: allFrontendMentorChallenge {
           edges {
@@ -48,7 +98,7 @@ module.exports = function(api) {
       }
     `);
 
-    data.frontendMentorChallenges.edges.forEach(({ node }) => {
+    frontendMentorChallengesData.frontendMentorChallenges.edges.forEach(({ node }) => {
       createPage({
         path: `/examples/fm-challenges/${node.slug}`,
         component: './src/templates/FrontendMentorChallenge.vue',
