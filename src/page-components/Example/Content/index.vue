@@ -18,8 +18,9 @@ export default {
   &::v-deep {
     > p {
       line-height: 1.5;
-      margin: 2rem auto;
+      margin: 0 auto;
       max-width: 35rem;
+      padding: 2rem 0;
 
       > code {
         background-color: #1e1e1e;
@@ -27,14 +28,22 @@ export default {
       }
     }
 
-    > h3 {
-      margin: 2rem auto;
+    > h2 {
+      margin: 0 auto;
       max-width: 35rem;
+      padding: 3rem 0;
+    }
+
+    > h3 {
+      margin: 0 auto;
+      max-width: 35rem;
+      padding: 2rem 0;
     }
 
     > h4 {
-      margin: 1rem auto;
+      margin: 0 auto;
       max-width: 35rem;
+      padding: 1rem 0;
     }
 
     > pre {
