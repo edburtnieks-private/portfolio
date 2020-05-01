@@ -31,6 +31,7 @@ query {
     edges {
       node {
         title
+        link
       }
     }
   }

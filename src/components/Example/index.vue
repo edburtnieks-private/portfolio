@@ -1,7 +1,7 @@
 <template>
-  <div>
-    TODO
-  </div>
+  <g-link :to="example.node.link">
+    <h3 v-text="example.node.title" class="title" />
+  </g-link>
 </template>
 
 <script>
@@ -16,5 +16,9 @@ export default {
 </script>
 
 <style scoped>
-
+.title {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
+}
 </style>
