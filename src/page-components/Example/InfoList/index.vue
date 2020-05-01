@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import InfoListItem from "~/page-components/FrontendMentorChallenge/InfoListItem";
+import InfoListItem from "~/page-components/Example/InfoListItem";
 
 export default {
   components: {

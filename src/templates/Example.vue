@@ -30,10 +30,10 @@
 </template>
 
 <script>
-import Breadcrumbs from "~/page-components/FrontendMentorChallenge/Breadcrumbs";
-import Title from "~/page-components/FrontendMentorChallenge/Title";
-import InfoList from "~/page-components/FrontendMentorChallenge/InfoList";
-import Content from "~/page-components/FrontendMentorChallenge/Content";
+import Breadcrumbs from "~/page-components/Example/Breadcrumbs";
+import Title from "~/page-components/Example/Title";
+import InfoList from "~/page-components/Example/InfoList";
+import Content from "~/page-components/Example/Content";
 import ChevronRightIcon from "~/assets/icons/ChevronRight";
 
 export default {
