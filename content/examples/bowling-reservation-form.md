@@ -23,6 +23,6 @@ Final result
 
 ## Process
 
-Before doing any research, exploration, design or development work, I had to come up with an idea for fictional bowling business.
+Before doing any research, exploration, design or development work, I wanted to come up with a rough outline for fictional bowling business.
 
 ![Fictional bowling business outline](/uploads/bowling-reservation-form-business.png)
