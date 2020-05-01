@@ -41,7 +41,7 @@ After I had an idea about the business, I wanted to prepare possible proposal re
 
 ### 3. Content strategy
 
-### 3.1. Competitor research
+#### 3.1. Competitor research
 
 ![Proposal research](/uploads/bowling-reservation-form-content-strategy-competitor-research.png)
 
