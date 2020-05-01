@@ -10,9 +10,9 @@
       </button>
 
       <InfoList
-        v-if="$page.example.links"
+        v-if="$page.example.links && $page.example.links.length"
         title="Links"
-        :items="links"
+        :items="$page.example.links"
         class="links-section"
         listClass="links-list"
       />
@@ -53,20 +53,6 @@ export default {
     return {
       isInfoActive: false
     };
-  },
-  computed: {
-    // links() {
-    //   return [
-    //     {
-    //       link: this.$page.example.liveSiteLink,
-    //       text: "Live site"
-    //     },
-    //     {
-    //       link: this.$page.example.gitHubRepositoryLink,
-    //       text: "GitHub repository"
-    //     }
-    //   ];
-    // }
   },
   methods: {
     toggleInfo() {
@@ -171,7 +157,10 @@ export default {
 query ($id: ID) {
   example(id: $id) {
     title
-    links
+    links {
+      text
+      link
+    }
     technologyStack
     content
   }

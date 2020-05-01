@@ -18,9 +18,10 @@ collections:
       - label: "Links"
         name: "links"
         widget: "list"
+        collapsed: false
         fields:
-          - { label: 'Live site link', name: 'liveSiteLink', widget: 'string', required: false }
-          - { label: 'GitHub repository', name: 'gitHubRepositoryLink', widget: 'string', required: false }
+          - { label: "Text", name: "text", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
       - { label: "Technology stack", name: "technologyStack", widget: "list" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Image Alt", name: "imageAlt", widget: "string" }
