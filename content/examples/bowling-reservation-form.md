@@ -19,7 +19,7 @@ Fully responsive and accessible multi-language React example project written in 
 
 Final result
 
-![Bowling reservation form finished result](/uploads/bowling-reservation-form-preview.png)
+![Bowling reservation form finished result](/uploads/bowling-reservation-form.png)
 
 ## Process
 
