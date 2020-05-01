@@ -16,3 +16,13 @@ image: /uploads/bowling-reservation-form-preview.png
 imageAlt: Bowling reservation form
 ---
 Fully responsive and accessible multi-language React example project written in TypeScript using SASS and CSS Modules.
+
+Final result
+
+![Bowling reservation form finished result](/uploads/bowling-reservation-form-preview.png)
+
+## Process
+
+Before doing any research, exploration, design and development work, I had to come up with an idea for fictional bowling business.
+
+![Fictional bowling business outline](/uploads/bowling-reservation-form-business.png)
