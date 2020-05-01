@@ -46,6 +46,17 @@ export default {
       padding: 1rem 0;
     }
 
+    > ol {
+      margin: 0 auto;
+      max-width: 35rem;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+
+      > li {
+        padding: 0.5rem;
+      }
+    }
+
     > pre {
       margin: 0 -2rem;
       position: relative;
