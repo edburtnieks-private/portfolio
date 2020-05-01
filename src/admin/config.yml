@@ -2,41 +2,48 @@ backend:
   name: github
   repo: edburtnieks/edburtnieks
 
-media_folder: 'static/uploads'
-public_folder: '/uploads'
+media_folder: "static/uploads"
+public_folder: "/uploads"
 
 collections:
-  - name: 'examples'
-    label: 'Example'
-    folder: 'content/examples'
+  - name: "examples"
+    label: "Example"
+    folder: "content/examples"
     create: true
-    slug: '{{fields.slug}}'
+    slug: "{{fields.slug}}"
     fields:
-      - { label: 'Slug', name: 'slug', widget: 'string' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Link', name: 'link', widget: 'string' }
-      - { label: 'Links', name: 'links', widget: 'boolean', default: true }
-      - { label: 'Live site link', name: 'liveSiteLink', widget: 'string' }
-      - { label: 'GitHub repository', name: 'gitHubRepositoryLink', widget: 'string' }
-      - { label: 'Technology stack', name: 'technologyStack', widget: 'list' }
-      - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Image Alt', name: 'imageAlt', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'frontend-mentor-challenges'
-    label: 'Frontend Mentor Challenge'
-    folder: 'content/frontend-mentor-challenges'
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Link", name: "link", widget: "string" }
+      - label: "Links"
+        name: "links"
+        widget: "list"
+        fields:
+          - { label: 'Live site link', name: 'liveSiteLink', widget: 'string', required: false }
+          - { label: 'GitHub repository', name: 'gitHubRepositoryLink', widget: 'string', required: false }
+      - { label: "Technology stack", name: "technologyStack", widget: "list" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image Alt", name: "imageAlt", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "frontend-mentor-challenges"
+    label: "Frontend Mentor Challenge"
+    folder: "content/frontend-mentor-challenges"
     create: true
-    slug: '{{fields.slug}}'
+    slug: "{{fields.slug}}"
     fields:
-      - { label: 'Slug', name: 'slug', widget: 'string' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Link', name: 'link', widget: 'string' }
-      - { label: 'Links', name: 'links', widget: 'boolean', default: true }
-      - { label: 'Challenge link', name: 'challengeLink', widget: 'string' }
-      - { label: 'Solution link', name: 'solutionLink', widget: 'string' }
-      - { label: 'Live site link', name: 'liveSiteLink', widget: 'string' }
-      - { label: 'GitHub repository', name: 'gitHubRepositoryLink', widget: 'string' }
-      - { label: 'Technology stack', name: 'technologyStack', widget: 'list' }
-      - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Image Alt', name: 'imageAlt', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Links", name: "links", widget: "boolean", default: true }
+      - { label: "Challenge link", name: "challengeLink", widget: "string" }
+      - { label: "Solution link", name: "solutionLink", widget: "string" }
+      - { label: "Live site link", name: "liveSiteLink", widget: "string" }
+      - {
+          label: "GitHub repository",
+          name: "gitHubRepositoryLink",
+          widget: "string",
+        }
+      - { label: "Technology stack", name: "technologyStack", widget: "list" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image Alt", name: "imageAlt", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }

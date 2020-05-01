@@ -2,9 +2,6 @@
 slug: bowling-reservation-form
 title: Bowling reservation form
 link: /examples/bowling-reservation-form/
-links: true
-liveSiteLink: 'http://bowling-reservation-form-demo.now.sh/'
-gitHubRepositoryLink: 'https://github.com/edburtnieks/bowling-reservation-form-demo'
 technologyStack:
   - React
   - Typescript

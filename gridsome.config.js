@@ -31,7 +31,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-netlify-cms-paths',
       options: {
-        contentTypes: ['FrontendMentorChallenge'],
+        contentTypes: ['Example', 'FrontendMentorChallenge'],
         coverField: 'image'
       }
     }

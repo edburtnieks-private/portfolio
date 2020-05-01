@@ -31,8 +31,6 @@ query {
     edges {
       node {
         title
-        liveSiteLink
-        gitHubRepositoryLink
       }
     }
   }

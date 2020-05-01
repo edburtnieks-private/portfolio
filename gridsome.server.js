@@ -17,15 +17,6 @@ module.exports = function(api) {
     createPage({
       path: '/examples',
       component: './src/templates/Examples.vue',
-      context: {
-        breadcrumbs: [
-          {
-            path: 'examples',
-            to: '/examples/',
-            text: 'Examples',
-          },
-        ],
-      },
     });
 
     const { data: examplesData } = await graphql(`

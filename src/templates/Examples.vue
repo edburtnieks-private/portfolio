@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <Container>
+    <Container v-if="$context.breadcrumbs">
       <Breadcrumbs :items="$context.breadcrumbs" />
     </Container>
 

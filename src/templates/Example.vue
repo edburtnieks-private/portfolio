@@ -55,18 +55,18 @@ export default {
     };
   },
   computed: {
-    links() {
-      return [
-        {
-          link: this.$page.example.liveSiteLink,
-          text: "Live site"
-        },
-        {
-          link: this.$page.example.gitHubRepositoryLink,
-          text: "GitHub repository"
-        }
-      ];
-    }
+    // links() {
+    //   return [
+    //     {
+    //       link: this.$page.example.liveSiteLink,
+    //       text: "Live site"
+    //     },
+    //     {
+    //       link: this.$page.example.gitHubRepositoryLink,
+    //       text: "GitHub repository"
+    //     }
+    //   ];
+    // }
   },
   methods: {
     toggleInfo() {
@@ -172,8 +172,6 @@ query ($id: ID) {
   example(id: $id) {
     title
     links
-    liveSiteLink
-    gitHubRepositoryLink
     technologyStack
     content
   }
