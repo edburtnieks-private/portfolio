@@ -12,7 +12,7 @@ technologyStack:
   - Typescript
   - SASS
   - CSS Modules
-image: /uploads/bowling-reservation-form-preview.png
+image: /uploads/bowling-reservation-form.png
 imageAlt: Bowling reservation form
 ---
 Fully responsive and accessible multi-language React example project written in TypeScript using SASS and CSS Modules.
