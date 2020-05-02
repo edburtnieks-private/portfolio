@@ -11,3 +11,23 @@ skills:
       - Svelte
       - REST
       - GraphQL
+      - Accessibility
+  - category: Dev Tools
+    skills:
+      - Git
+      - Unix
+      - Node
+      - Gulp
+      - Webpack
+      - Agile methodologies
+      - Docker
+      - Netlify
+  - category: Design
+    skills:
+      - User Interface (UI)
+      - User Experience (UX)
+      - Responsive design
+  - category: Design software
+    skills:
+      - Adobe XD
+      - Figma
