@@ -1,0 +1,13 @@
+skills:
+  - category: Development
+    skills:
+      - HTML5
+      - CSS3
+      - JavaScript
+      - ES8+
+      - TypeScript
+      - React
+      - Vue
+      - Svelte
+      - REST
+      - GraphQL
