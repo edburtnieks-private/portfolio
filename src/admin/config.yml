@@ -50,13 +50,17 @@ collections:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Image Alt", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "skills"
-    label: "Skills"
-    file: "content/skills.yml"
-    fields:
-      - label: "Skills"
-        name: "skills"
-        widget: "list"
+  - name: "general"
+    label: "General"
+    files:
+      - name: "skills"
+        label: "Skills"
+        file: "content/skills.yml"
         fields:
-          - { label: "Skills", name: "skills", widget: "list" }
-          - { label: "Category", name: "category", widget: "string" }
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            collapsed: false
+            fields:
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Skills", name: "skills", widget: "list" }

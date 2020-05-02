@@ -7,10 +7,12 @@
       sectionClass="skills-section"
     >
       <div class="skills-wrapper">
-        <SkillList title="Development" :skills="developmentSkills" class="skill-list" />
-        <SkillList title="Development Tools" :skills="developmentTools" class="skill-list" />
-        <SkillList title="Design" :skills="designSkills" class="skill-list" />
-        <SkillList title="Design Tools" :skills="designTools" class="skill-list" />
+        <SkillList
+          v-for="skill in skills"
+          :key="skill.category"
+          :skill="skill"
+          class="skill-list"
+        />
       </div>
     </Section>
   </transition>
@@ -25,34 +27,11 @@ export default {
     Section,
     SkillList
   },
-  data() {
-    return {
-      developmentSkills: [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
-        "TypeScript",
-        "ES8+",
-        "React",
-        "Vue",
-        "Svelte",
-        "Accessibility"
-      ],
-      developmentTools: [
-        "Git",
-        "Unix",
-        "Node",
-        "Gulp",
-        "Webpack",
-        "Agile metodologies"
-      ],
-      designSkills: [
-        "User Interface (UI)",
-        "User Experience (UX)",
-        "Responsive design"
-      ],
-      designTools: ["Adobe XD", "Figma"]
-    };
+  props: {
+    skills: {
+      type: Array,
+      required: true
+    }
   }
 };
 </script>

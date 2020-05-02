@@ -2,7 +2,7 @@
   <Layout home>
     <Hero />
     <Examples :examples="$page.examples.edges" />
-    <Skills />
+    <Skills :skills="$page.skills.edges[0].node.skills" />
   </Layout>
 </template>
 
@@ -32,6 +32,16 @@ query {
       node {
         title
         link
+      }
+    }
+  }
+  skills: allSkill {
+    edges {
+      node {
+        skills {
+          category
+          skills
+        }
       }
     }
   }
