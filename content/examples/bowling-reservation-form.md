@@ -21,9 +21,9 @@ Final result
 
 ![Bowling reservation form finished result](/uploads/bowling-reservation-form.png)
 
-## Process
+## User experience research and discovery
 
-### 1. Coming up with fictional business
+### 1. Business
 
 Before doing any research, exploration, design or development work, I wanted to come up with a rough outline for fictional bowling business.
 
@@ -43,5 +43,25 @@ After I had an idea about the business, I wanted to prepare possible proposal re
 
 #### 3.1. Competitor research
 
-![Proposal research](/uploads/bowling-reservation-form-content-strategy-competitor-research.png)
+Before moving forward, I wanted to see what is already out there and look at some existing bowling sites in my area.
+I created separate board for each bowling business, diving and exploring deeper on each one. Then narrowed the list down to most common features I noticed.
 
+![Competitor research](/uploads/bowling-reservation-form-competitor-research.png)
+
+#### 3.2. User stories
+
+After I had an idea what already exists, I created user stories to get an idea of possible functionalities to include and prioritize them.
+
+![Competitor research](/uploads/bowling-reservation-form-user-stories.png)
+
+### 4. Information architecture
+
+At this point I created complete information architecture for whole site. Since I focused only on online reservation form, I will include only that.
+
+I started by defining possible inputs
+
+![Form inputs outline](/uploads/bowling-reservation-form-reservation-form-inputs.png)
+
+and outputs for the form.
+
+![Form outputs outline](/uploads/bowling-reservation-form-reservation-form-outputs.png)
