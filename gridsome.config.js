@@ -23,6 +23,13 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Skill',
+        path: 'content/skills.yml'
+      }
+    },
+    {
       use: 'gridsome-plugin-netlify-cms',
       options: {
         publicPath: '/admin'
