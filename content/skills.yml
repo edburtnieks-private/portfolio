@@ -12,3 +12,13 @@ skills:
       - REST
       - GraphQL
       - Accessibility
+  - category: Dev Tools
+    skills:
+      - Git
+      - Unix
+      - Node
+      - Gulp
+      - Webpack
+      - Agile methodologies
+      - Docker
+      - Netlify
