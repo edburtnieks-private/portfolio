@@ -27,7 +27,7 @@ Final result
 
 Before doing any research, exploration, design or development work, I wanted to come up with a rough outline for fictional bowling business.
 
-<img src="/uploads/bowling-reservation-form-business.png" alt="Bowling reservation form finished result" class="themeable" />
+<img src="/uploads/bowling-reservation-form-business.png" alt="Business" class="themeable" />
 
 ### 2. Proposal research
 
