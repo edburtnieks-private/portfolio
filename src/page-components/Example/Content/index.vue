@@ -16,48 +16,48 @@ export default {
 <style lang="scss" scoped>
 .content-container {
   &::v-deep {
-    > p {
+    p {
       line-height: 1.5;
       margin: 0 auto;
       max-width: 35rem;
       padding: 2rem 0;
 
-      > code {
+      code {
         background-color: #1e1e1e;
         padding: 0.25rem;
       }
     }
 
-    > h2 {
+    h2 {
       margin: 0 auto;
       max-width: 35rem;
       padding: 3rem 0;
     }
 
-    > h3 {
+    h3 {
       margin: 0 auto;
       max-width: 35rem;
       padding: 2rem 0;
     }
 
-    > h4 {
+    h4 {
       margin: 0 auto;
       max-width: 35rem;
       padding: 1rem 0;
     }
 
-    > ol {
+    ol {
       margin: 0 auto;
       max-width: 35rem;
       padding-bottom: 1rem;
       padding-top: 1rem;
 
-      > li {
+      li {
         padding: 0.5rem;
       }
     }
 
-    > pre {
+    pre {
       margin: 0 -2rem;
       position: relative;
 
@@ -77,8 +77,10 @@ export default {
         margin-left: 0;
         max-width: 100%;
       }
+    }
 
-      &.themeable {
+    div.themeable {
+      img {
         filter: invert(1);
       }
     }
