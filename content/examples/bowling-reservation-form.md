@@ -19,15 +19,13 @@ Fully responsive and accessible multi-language React example project written in 
 
 Final result
 
-![Bowling reservation form finished result](/uploads/bowling-reservation-form.png)
-
 ## User experience research and discovery
 
 ### 1. Business
 
 Before doing any research, exploration, design or development work, I wanted to come up with a rough outline for fictional bowling business.
 
-![Fictional bowling business outline](/uploads/bowling-reservation-form-business.png)
+<img src="/uploads/bowling-reservation-form-business.png" alt="Bowling reservation form finished result" class="themeable left" />
 
 ### 2. Proposal research
 
@@ -43,8 +41,7 @@ After I had an idea about the business, I wanted to prepare possible proposal re
 
 #### 3.1. Competitor research
 
-Before moving forward, I wanted to see what is already out there and look at some existing bowling sites in my area.
-I created separate board for each bowling business, diving and exploring deeper on each one. Then narrowed the list down to most common features I noticed.
+Before moving forward, I wanted to see what is already out there and look at some existing bowling sites in my area. I created separate board for each bowling business, diving and exploring deeper on each one. Then narrowed the list down to most common features I noticed.
 
 ![Competitor research](/uploads/bowling-reservation-form-competitor-research.png)
 
