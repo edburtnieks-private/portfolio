@@ -77,6 +77,10 @@ export default {
         margin-left: 0;
         max-width: 100%;
       }
+
+      &.themeable {
+        filter: invert(1);
+      }
     }
   }
 }
