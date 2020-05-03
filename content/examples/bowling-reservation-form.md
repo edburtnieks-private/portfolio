@@ -19,6 +19,8 @@ Fully responsive and accessible multi-language React example project written in 
 
 Final result
 
+![Final result](/uploads/bowling-reservation-form.png)
+
 ## User experience research and discovery
 
 ### 1. Business
