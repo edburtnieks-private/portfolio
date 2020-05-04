@@ -109,25 +109,13 @@ After I had an idea what already exists, I created user stories to get an idea o
 
 At this point I created complete information architecture for whole site. Since I focused only on online reservation form, I will include only that.
 
+I defined possible inputs and outputs for the form.
+
 </div>
-
-<div>
-
-I started by defining possible inputs
 
 <div class="themeable">
 
-![Form inputs outline](/uploads/bowling-reservation-form-reservation-form-inputs.png)
-
-</div>
-
-and outputs for the form.
-
-<div class="themeable">
-
-![Form outputs outline](/uploads/bowling-reservation-form-reservation-form-outputs.png)
-
-</div>
+![Form inputs and outputs outline](/uploads/bowling-reservation-form-reservation-form.png)
 
 </div>
 
