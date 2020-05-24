@@ -6,7 +6,7 @@
           <div>Full Stack Designer</div>
           <div
             class="hero-subtitle"
-          >Currently looking for development opportunities in Riga or remotely.</div>
+          >Currently looking for new development opportunities</div>
         </h1>
 
         <a href="mailto:edburtnieks@gmail.com">Write me an email (edburtnieks@gmail.com)</a>
