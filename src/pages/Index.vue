@@ -14,7 +14,7 @@ import Skills from "~/page-components/Home/Skills";
 
 export default {
   metaInfo: {
-    title: "Full Stack Designer / Frontend Developer"
+    title: "Full Stack Designer"
   },
   components: {
     Section,
@@ -30,8 +30,11 @@ query {
   examples: allExample {
     edges {
       node {
+        id
         title
         link
+        image
+        imageAlt
       }
     }
   }

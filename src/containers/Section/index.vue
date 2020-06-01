@@ -1,15 +1,21 @@
 <template>
-  <Container withPadding>
-    <section :class="sectionClass">
+  <section class="with-vertical-padding" :class="sectionClass">
+    <Container>
       <h2 v-if="title" v-text="title" class="title" />
+    </Container>
+
+    <Container :withoutHorizontalPadding="withoutHorizontalPadding">
       <slot />
-    </section>
-  </Container>
+    </Container>
+  </section>
 </template>
 
 <script>
 export default {
   props: {
+    withoutHorizontalPadding: {
+      type: Boolean
+    },
     sectionClass: {
       type: String
     },
@@ -20,7 +26,17 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.with-vertical-padding {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+
+  @media (min-width: 768px) {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+  }
+}
+
 .title {
   font-size: 1.3rem;
   margin-bottom: 2rem;

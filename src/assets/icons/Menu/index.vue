@@ -4,7 +4,7 @@
     width="24"
     height="24"
     fill="none"
-    stroke="#f5f5f5"
+    stroke="currentColor"
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"

@@ -94,7 +94,7 @@ export default {
 
 .show-info-button {
   background-color: var(--c-dark);
-  color: var(--c-light);
+  color: var(--c-primary);
   display: flex;
   left: 100%;
   padding: 0.5rem;

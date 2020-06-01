@@ -97,7 +97,7 @@ export default {
 }
 
 .overlay {
-  background-color: #353535;
+  background-color: var(--c-grey);
   border-top-right-radius: 0.5rem;
   bottom: 0;
   padding: 11px 1rem;

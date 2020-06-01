@@ -1,10 +1,6 @@
 <template>
   <header class="header">
-    <transition v-if="home" name="logo-slide-fade-in" appear>
-      <Logo />
-    </transition>
-
-    <Logo v-else />
+    <Logo />
 
     <MenuButton
       ref="menuButton"
@@ -13,13 +9,7 @@
       :class="['menu-button', { active: isNavigationActive }]"
     />
 
-    <transition v-if="home" name="navigation-fade-in" appear>
-      <div ref="menu" class="navigation-container">
-        <Navigation class="navigation" />
-      </div>
-    </transition>
-
-    <div v-else ref="menu" class="navigation-container">
+    <div ref="menu" class="navigation-container">
       <Navigation class="navigation" />
     </div>
   </header>
@@ -35,12 +25,6 @@ export default {
     Logo,
     Navigation,
     MenuButton
-  },
-  props: {
-    home: {
-      type: Boolean,
-      default: false
-    }
   },
   data() {
     return {
@@ -85,11 +69,12 @@ export default {
   &.active {
     display: block;
     position: fixed;
-    top: 1.9rem;
+    right: 2rem;
+    top: 115px;
     z-index: 3;
 
     .navigation {
-      background-color: #353535;
+      background-color: var(--c-grey);
       border-radius: 0.5rem;
       padding: 0 1rem;
     }
@@ -111,26 +96,9 @@ export default {
   }
 
   .navigation {
-    background-color: #353535;
+    background-color: var(--c-grey);
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
-  }
-
-  .logo-slide-fade-in-enter {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-
-  .logo-slide-fade-in-enter-active {
-    transition: all 0.7s ease-in-out 0.3s;
-  }
-
-  .navigation-fade-in-enter {
-    opacity: 0;
-  }
-
-  .navigation-fade-in-enter-active {
-    transition: opacity 1s ease-in-out 1.3s;
   }
 }
 

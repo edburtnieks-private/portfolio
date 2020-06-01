@@ -1,5 +1,5 @@
 <template>
-  <Container v-if="content" v-html="content" withPadding class="content-container" />
+  <Container v-if="content" v-html="content" withVerticalPadding class="content-container" />
 </template>
 
 <script>
@@ -23,7 +23,7 @@ export default {
       padding: 2rem 0;
 
       code {
-        background-color: #1e1e1e;
+        background-color: var(--c-grey-dark);
         padding: 0.25rem;
       }
     }

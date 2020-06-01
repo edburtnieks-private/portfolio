@@ -34,8 +34,6 @@ export default {
 };
 </script>
 
-</script>
-
 <style lang="scss" scoped>
 .navigation {
   font-size: 0.875rem;
@@ -47,11 +45,12 @@ export default {
 }
 
 .link {
+  color: var(--c-light);
   display: block;
   padding: 1rem 0;
 
   &.active::before {
-    background-color: #cee4f6;
+    background-color: var(--c-primary);
     border-radius: 50%;
     content: "";
     height: 0.8rem;

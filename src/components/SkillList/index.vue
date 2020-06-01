@@ -5,8 +5,8 @@
       <li
         v-for="skill in skill.skills"
         :key="skill"
-        class="skill-list-item"
         v-text="skill"
+        class="skill-list-item"
       />
     </ul>
   </div>

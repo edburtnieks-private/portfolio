@@ -1,5 +1,13 @@
 <template>
-  <div :class="['container', { 'with-padding': withPadding }]">
+  <div
+    :class="[
+      'container',
+      {
+        'with-vertical-padding': withVerticalPadding,
+        'without-horizontal-padding': withoutHorizontalPadding,
+      },
+    ]"
+  >
     <slot />
   </div>
 </template>
@@ -7,7 +15,11 @@
 <script>
 export default {
   props: {
-    withPadding: {
+    withVerticalPadding: {
+      type: Boolean,
+      default: false
+    },
+    withoutHorizontalPadding: {
       type: Boolean,
       default: false
     }
@@ -20,9 +32,14 @@ export default {
   padding-left: var(--s-mobile);
   padding-right: var(--s-mobile);
 
-  &.with-padding {
+  &.with-vertical-padding {
     padding-bottom: 3rem;
     padding-top: 3rem;
+  }
+
+  &.without-horizontal-padding {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -31,9 +48,14 @@ export default {
     padding-left: var(--s-mobile);
     padding-right: var(--s-mobile);
 
-    &.with-padding {
+    &.with-vertical-padding {
       padding-bottom: 4rem;
       padding-top: 4rem;
+    }
+
+    &.without-horizontal-padding {
+      padding-left: var(--s-mobile);
+      padding-right: var(--s-mobile);
     }
   }
 }
@@ -46,6 +68,11 @@ export default {
     padding-left: 0;
     padding-right: 0;
     width: 100%;
+
+    &.without-horizontal-padding {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 </style>
