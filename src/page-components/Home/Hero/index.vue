@@ -2,7 +2,7 @@
   <Section>
     <h1 class="hero-title">
       <div>
-        Full Stack Designer saving time by building engaging interactions
+        Full Stack Designer saving time by building easy-to-use web apps
       </div>
       <div class="hero-subtitle">
         Currently looking for new development opportunities
