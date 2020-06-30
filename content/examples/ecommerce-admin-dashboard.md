@@ -26,7 +26,11 @@ Fully responsive dashboard example designed with Figma and developed with React,
 
 ## Screenshots
 
+<div class="large">
+
 ![Desktop](/uploads/ecommerce-admin-dashboard-demo.png)
+
+</div>
 
 ## Process
 
@@ -54,9 +58,9 @@ After I got more detailed and set on design, I started breaking down a design in
 
 And after couple iterations on design and development, I set up basic REST API using [json-server](https://github.com/typicode/json-server).
 
-### Documentation and tests
+### Documentation / styleguide and testing
 
-Upon implementing a new component, I added it to documentation together with sample usage with [react-styleguidist](https://react-styleguidist.js.org/), wrote tests using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro), and refactored necessary code.
+Upon implementing a new component, I added it to documentation together with sample usage with [react-styleguidist](https://react-styleguidist.js.org/), wrote tests using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro), and refactored necessary code making use of TDD.
 
 ## Full technology stack
 
