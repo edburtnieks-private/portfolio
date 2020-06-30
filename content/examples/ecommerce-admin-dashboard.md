@@ -42,6 +42,13 @@ The idea came from [this post](https://techcrunch.com/2020/05/11/primer/?guccoun
 
 #### 2.1. I started by creating user stories
 
+<div class="large themeable">
+
+![User stories](/uploads/user-stories.jpg)
+
+</div>
+
+
 #### 2.2. and outlining information architecture
 
 #### 2.3. After getting some structure in mind I continued with wireframes
@@ -68,24 +75,24 @@ Project boilerplate was generated using [create-react-app](https://create-react-
 
 ### Design
 
-- [Figma](https://www.figma.com/)
+* [Figma](https://www.figma.com/)
 
 ### Frontend
 
 Hosted on Netlify
 
-- [React](https://reactjs.org/)
-- [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
-- [React Styleguidist](https://react-styleguidist.js.org/) - Isolated React component development environment with a living style guide
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) - Library for testing React components
-- [Typescript](https://www.typescriptlang.org/)
-- [SASS](https://sass-lang.com/)
-- [CSS Modules](https://github.com/css-modules/css-modules)
-- [classnames](https://github.com/JedWatson/classnames) - Javascript utility for conditionally joining classNames together
-- [Easy Peasy](https://easy-peasy.now.sh/) - React state library
+* [React](https://reactjs.org/)
+* [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+* [React Styleguidist](https://react-styleguidist.js.org/) - Isolated React component development environment with a living style guide
+* [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) - Library for testing React components
+* [Typescript](https://www.typescriptlang.org/)
+* [SASS](https://sass-lang.com/)
+* [CSS Modules](https://github.com/css-modules/css-modules)
+* [classnames](https://github.com/JedWatson/classnames) - Javascript utility for conditionally joining classNames together
+* [Easy Peasy](https://easy-peasy.now.sh/) - React state library
 
 ### API
 
 Hosted on Heroku
 
-- [json-server](https://github.com/typicode/json-server) - Fake REST API
+* [json-server](https://github.com/typicode/json-server) - Fake REST API
