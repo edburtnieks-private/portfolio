@@ -58,6 +58,12 @@ The idea came from [this post](https://techcrunch.com/2020/05/11/primer/?guccoun
 
 #### 2.3. Wireframes
 
+<div class="large">
+
+![Wireframes](/uploads/ead-wireframes.png)
+
+</div>
+
 #### 2.4. Layout exploration
 
 #### 2.5. Design exploration
