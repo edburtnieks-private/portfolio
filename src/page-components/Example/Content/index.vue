@@ -80,6 +80,7 @@ export default {
       position: relative;
 
       @media (min-width: 650px) {
+        border-radius: 1rem;
         margin-left: 0;
         max-width: 100%;
       }
@@ -89,6 +90,11 @@ export default {
       &.themeable {
         img {
           filter: invert(1);
+          padding: 1rem;
+
+          @media (min-width: 650px) {
+            border: 1px solid var(--c-dark);
+          }
         }
       }
 
