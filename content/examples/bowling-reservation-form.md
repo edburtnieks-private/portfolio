@@ -9,7 +9,7 @@ links:
     text: GitHub repository
 technologyStack:
   - React
-  - Typescript
+  - TypeScript
   - SASS
   - CSS Modules
 image: /uploads/bowling-reservation-form.png
