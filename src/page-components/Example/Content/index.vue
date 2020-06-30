@@ -46,14 +46,20 @@ export default {
       padding: 1rem 0;
     }
 
-    ol {
+    ol,
+    ul {
       margin: 0 auto;
       max-width: 35rem;
       padding-bottom: 1rem;
       padding-top: 1rem;
 
       li {
+        line-height: 1.5;
         padding: 0.5rem;
+
+        a {
+          line-height: 1;
+        }
       }
     }
 
@@ -79,9 +85,18 @@ export default {
       }
     }
 
-    div.themeable {
-      img {
-        filter: invert(1);
+    div {
+      &.themeable {
+        img {
+          filter: invert(1);
+        }
+      }
+
+      &.large {
+        p {
+          max-width: 100%;
+          text-align: center;
+        }
       }
     }
   }
