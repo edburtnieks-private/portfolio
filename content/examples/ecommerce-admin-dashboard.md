@@ -48,7 +48,6 @@ The idea came from [this post](https://techcrunch.com/2020/05/11/primer/?guccoun
 
 </div>
 
-
 #### 2.2. and outlining information architecture
 
 #### 2.3. After getting some structure in mind I continued with wireframes
