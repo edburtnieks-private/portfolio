@@ -40,7 +40,7 @@ The idea came from [this post](https://techcrunch.com/2020/05/11/primer/?guccoun
 
 ### 2. Design
 
-#### 2.1. I started by creating user stories
+#### 2.1. User stories
 
 <div class="large themeable">
 
@@ -48,7 +48,7 @@ The idea came from [this post](https://techcrunch.com/2020/05/11/primer/?guccoun
 
 </div>
 
-#### 2.2. and outlining information architecture
+#### 2.2. Information architecture
 
 <div class="large themeable">
 
@@ -56,11 +56,11 @@ The idea came from [this post](https://techcrunch.com/2020/05/11/primer/?guccoun
 
 </div>
 
-#### 2.3. After getting some structure in mind I continued with wireframes
+#### 2.3. Wireframes
 
-#### 2.4. and then moved to exploring layout
+#### 2.4. Layout exploration
 
-#### 2.5. and design itself
+#### 2.5. Design exploration
 
 ### Development
 
