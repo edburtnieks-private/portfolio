@@ -44,7 +44,7 @@ The idea came from [this post](https://techcrunch.com/2020/05/11/primer/?guccoun
 
 <div class="large themeable">
 
-![User stories](/uploads/user-stories.jpg)
+![User stories](/uploads/user-stories.png)
 
 </div>
 
