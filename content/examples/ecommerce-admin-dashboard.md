@@ -50,7 +50,11 @@ The idea came from [this post](https://techcrunch.com/2020/05/11/primer/?guccoun
 
 #### 2.2. and outlining information architecture
 
+<div class="large themeable">
+
 ![Information architecture](/uploads/ead-information-architecture.png)
+
+</div>
 
 #### 2.3. After getting some structure in mind I continued with wireframes
 
