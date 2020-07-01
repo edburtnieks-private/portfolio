@@ -66,6 +66,12 @@ The idea came from [this post](https://techcrunch.com/2020/05/11/primer/?guccoun
 
 #### 2.4. Layout exploration
 
+<div class="large">
+
+![Layout exploration](/uploads/ead-layout-exploration.png)
+
+</div>
+
 #### 2.5. Design exploration
 
 ### Development
