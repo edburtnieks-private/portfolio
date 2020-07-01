@@ -19,7 +19,11 @@ Fully responsive and accessible multi-language React example project written in 
 
 Final result
 
+<div class="large">
+
 ![Final result](/uploads/bowling-reservation-form.png)
+
+</div>
 
 ## User experience research and discovery
 
@@ -33,7 +37,7 @@ Before doing any research, exploration, design or development work, I wanted to 
 
 </div>
 
-<div class="themeable">
+<div class="large themeable">
 
 ![Business](/uploads/bowling-reservation-form-business.png)
 
@@ -55,7 +59,7 @@ After I had an idea about the business, I wanted to prepare possible proposal re
 
 </div>
 
-<div class="themeable">
+<div class="large themeable">
 
 ![Proposal research](/uploads/bowling-reservation-form-proposal-research.png)
 
@@ -75,7 +79,7 @@ Before moving forward, I wanted to see what is already out there and look at som
 
 </div>
 
-<div class="themeable">
+<div class="large themeable">
 
 ![Competitor research](/uploads/bowling-reservation-form-competitor-research.png)
 
@@ -93,7 +97,7 @@ After I had an idea what already exists, I created user stories to get an idea o
 
 </div>
 
-<div class="themeable">
+<div class="large themeable">
 
 ![User stories](/uploads/bowling-reservation-form-user-stories.png)
 
@@ -113,7 +117,7 @@ I defined possible inputs and outputs for the form.
 
 </div>
 
-<div class="themeable">
+<div class="large themeable">
 
 ![Form inputs and outputs outline](/uploads/bowling-reservation-form-reservation-form.png)
 
