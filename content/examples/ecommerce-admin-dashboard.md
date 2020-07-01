@@ -74,6 +74,12 @@ The idea came from [this post](https://techcrunch.com/2020/05/11/primer/?guccoun
 
 #### 2.5. Design exploration
 
+<div class="large">
+
+![Design exploration](/uploads/ead-design-exploration.png)
+
+</div>
+
 ### Development
 
 At this point I started to set up React project, configuring the development environment, and started to develop basic structure based on ready designs.
