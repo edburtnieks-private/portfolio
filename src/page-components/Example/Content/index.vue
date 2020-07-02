@@ -114,6 +114,21 @@ export default {
           text-align: center;
         }
       }
+
+      &.side-by-side {
+        @media (min-width: 650px) {
+          display: flex;
+          justify-content: space-between;
+          margin: 0 auto;
+          max-width: 900px;
+        }
+
+        @media (min-width: 650px) {
+          p {
+            margin: 0;
+          }
+        }
+      }
     }
   }
 }
