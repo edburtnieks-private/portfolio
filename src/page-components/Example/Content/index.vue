@@ -90,9 +90,8 @@ export default {
       &.themeable {
         p {
           @media (min-width: 650px) {
-            border: 1px solid var(--c-dark);
+            border: 1px solid var(--c-light);
             border-radius: 1rem;
-            max-width: 900px;
           }
         }
 
@@ -104,7 +103,7 @@ export default {
 
       &.large {
         p {
-          max-width: 100%;
+          max-width: 900px;
           text-align: center;
         }
       }
