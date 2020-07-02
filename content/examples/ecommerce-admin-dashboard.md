@@ -40,21 +40,45 @@ The idea came from [this post](https://techcrunch.com/2020/05/11/primer/?guccoun
 
 ### 2. Design
 
-#### 2.1. I started by creating user stories
+#### 2.1. User stories
 
 <div class="large themeable">
 
-![User stories](/uploads/user-stories.png)
+![User stories](/uploads/ead-user-stories.png)
 
 </div>
 
-#### 2.2. and outlining information architecture
+#### 2.2. Information architecture
 
-#### 2.3. After getting some structure in mind I continued with wireframes
+<div class="large themeable">
 
-#### 2.4. and then moved to exploring layout
+![Information architecture](/uploads/ead-information-architecture.png)
 
-#### 2.5. and design itself
+</div>
+
+#### 2.3. Wireframes
+
+<div class="large">
+
+![Wireframes](/uploads/ead-wireframes.png)
+
+</div>
+
+#### 2.4. Layout exploration
+
+<div class="large">
+
+![Layout exploration](/uploads/ead-layout-exploration.png)
+
+</div>
+
+#### 2.5. Design exploration
+
+<div class="large">
+
+![Design exploration](/uploads/ead-design-exploration.png)
+
+</div>
 
 ### Development
 
