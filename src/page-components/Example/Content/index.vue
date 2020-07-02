@@ -93,7 +93,7 @@ export default {
     div {
       &.themeable {
         p {
-          margin: 2rem 0;
+          margin: 2rem auto;
           padding: 0;
 
           @media (min-width: 650px) {
