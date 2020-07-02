@@ -116,6 +116,12 @@ export default {
       }
 
       &.side-by-side {
+        img {
+          display: flex;
+          margin: 0 auto;
+          max-width: 100%;
+        }
+
         @media (min-width: 650px) {
           display: flex;
           justify-content: space-between;
@@ -126,6 +132,10 @@ export default {
         @media (min-width: 650px) {
           p {
             margin: 0;
+
+            &:first-of-type {
+              margin-right: 2rem;
+            }
           }
         }
       }
