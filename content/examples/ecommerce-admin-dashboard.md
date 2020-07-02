@@ -32,6 +32,14 @@ Fully responsive dashboard example designed with Figma and developed with React,
 
 </div>
 
+<div class="side-by-side">
+
+![Mobile](/uploads/ead-mobile.png)
+
+![Mobile with actions open](/uploads/ead-mobile-actions-open.png)
+
+</div>
+
 ## Process
 
 ### 1. Idea
