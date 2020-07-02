@@ -93,6 +93,9 @@ export default {
     div {
       &.themeable {
         p {
+          margin: 2rem 0;
+          padding: 0;
+
           @media (min-width: 650px) {
             border: 1px solid var(--c-light);
             border-radius: 1rem;
