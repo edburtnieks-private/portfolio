@@ -20,6 +20,18 @@
           <ExternalLinkIcon class="external-link-icon" />
         </span>
       </li>
+
+      <li class="navigation-list-item">
+        <span class="external-link">
+          <a
+            href="Edgar Burtnieks (CV).pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link"
+          >Resume</a>
+          <ExternalLinkIcon class="external-link-icon" />
+        </span>
+      </li>
     </ul>
   </nav>
 </template>
