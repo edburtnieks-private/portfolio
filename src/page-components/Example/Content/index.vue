@@ -60,6 +60,10 @@ export default {
       li {
         line-height: 1.5;
         padding: 0.5rem;
+
+        a {
+          line-height: 1;
+        }
       }
     }
 
