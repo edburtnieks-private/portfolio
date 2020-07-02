@@ -82,19 +82,23 @@ export default {
       @media (min-width: 650px) {
         border-radius: 1rem;
         margin-left: 0;
-        max-width: 100%;
+        max-width: 900px;
       }
     }
 
     div {
       &.themeable {
+        p {
+          @media (min-width: 650px) {
+            border: 1px solid var(--c-dark);
+            border-radius: 1rem;
+            max-width: 900px;
+          }
+        }
+
         img {
           filter: invert(1);
           padding: 1rem;
-
-          @media (min-width: 650px) {
-            border: 1px solid var(--c-dark);
-          }
         }
       }
 
