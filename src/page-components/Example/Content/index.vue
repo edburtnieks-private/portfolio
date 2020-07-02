@@ -82,7 +82,7 @@ export default {
       @media (min-width: 650px) {
         border-radius: 1rem;
         margin-left: 0;
-        max-width: 900px;
+        max-width: 100%;
       }
     }
 
