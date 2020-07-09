@@ -17,7 +17,8 @@ export default {
 .content-container {
   &::v-deep {
     p {
-      line-height: 1.5;
+      font-size: 1.125rem;
+      line-height: 2rem;
       margin: 0 auto;
       max-width: 35rem;
       padding: 2rem 0;
