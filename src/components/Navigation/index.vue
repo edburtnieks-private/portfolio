@@ -2,35 +2,55 @@
   <nav class="navigation">
     <ul class="navigation-list">
       <li class="navigation-list-item">
-        <g-link to="/" exact class="link">Home</g-link>
+        <g-link to="/" exact class="link">
+          <span class="text">
+            Home
+          </span>
+        </g-link>
       </li>
 
       <li class="navigation-list-item">
-        <g-link to="/examples/" class="link">Examples</g-link>
+        <g-link to="/examples/" class="link">
+          <span class="text">
+            Examples
+          </span>
+        </g-link>
       </li>
 
       <li class="navigation-list-item">
-        <span class="external-link">
-          <a
-            href="https://github.com/edburtnieks"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link"
-          >GitHub</a>
+        <g-link to="/blog/" class="link">
+          <span class="text">
+            Blog
+          </span>
+        </g-link>
+      </li>
+
+      <li class="navigation-list-item">
+        <a
+          href="https://github.com/edburtnieks"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link"
+        >
+          <span class="text">
+            GitHub
+          </span>
           <ExternalLinkIcon class="external-link-icon" />
-        </span>
+        </a>
       </li>
 
       <li class="navigation-list-item">
-        <span class="external-link">
-          <a
-            href="Edgar Burtnieks (CV).pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link"
-          >Resume</a>
+        <a
+          href="Edgar Burtnieks (CV).pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link"
+        >
+          <span class="text">
+            Resume
+          </span>
           <ExternalLinkIcon class="external-link-icon" />
-        </span>
+        </a>
       </li>
     </ul>
   </nav>
@@ -54,12 +74,17 @@ export default {
 .navigation-list {
   list-style: none;
   padding: 0;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .link {
+  align-items: flex-start;
   color: var(--c-light);
-  display: block;
-  padding: 1rem 0;
+  display: flex;
+  padding: 1rem 0.5rem;
 
   &.active::before {
     background-color: var(--c-primary);
@@ -70,6 +95,11 @@ export default {
     position: absolute;
     top: 1.1rem;
     width: 0.8rem;
+
+    @media (min-width: 768px) {
+      left: 50%;
+      transform: translate(-0.4rem, 1.55rem);
+    }
   }
 
   &::after {
@@ -77,21 +107,19 @@ export default {
   }
 }
 
-.external-link {
-  display: inline-flex;
+.text {
+  position: relative;
 }
 
 .external-link-icon {
   height: 12px;
   margin-left: 0.5rem;
-  transform: translateY(1rem);
   width: 12px;
 }
 
 @media (min-width: 768px) {
   .link {
-    display: inline-block;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.5rem; 
 
     &.active::before {
       top: 0.6rem;
@@ -101,14 +129,18 @@ export default {
       outline: 0;
 
       &::after {
+        content: none;
+      }
+
+      .text::after {
         border-bottom: 2px dotted;
-        bottom: 0.25rem;
+        bottom: -0.25rem;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
       }
     }
-  }
-
-  .external-link-icon {
-    transform: translateY(0.5rem);
   }
 }
 </style>

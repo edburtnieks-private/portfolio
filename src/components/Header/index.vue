@@ -91,7 +91,6 @@ export default {
     justify-content: flex-end;
     position: fixed;
     right: 2rem;
-    top: 7rem;
     z-index: 1;
   }
 
