@@ -88,6 +88,30 @@ The idea came from [this post](https://techcrunch.com/2020/05/11/primer/?guccoun
 
 </div>
 
+#### 2.6. Assets
+
+<div class="large">
+
+![Assets](/uploads/ead-assets.png)
+
+</div>
+
+#### 2.7. Components
+
+<div class="large">
+
+![Components](/uploads/ead-components.png)
+
+</div>
+
+#### 2.8 Final design of checkout option card component
+
+<div class="large">
+
+![Checkout options card component](/uploads/ead-checkout-options-card-component.png)
+
+</div>
+
 ### Development
 
 At this point I started to set up React project, configuring the development environment, and started to develop basic structure based on ready designs.
