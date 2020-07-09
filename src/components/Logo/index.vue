@@ -31,6 +31,7 @@ export default {
   }
 
   span {
+    line-height: 1;
     margin-left: 0.5rem;
   }
 }
