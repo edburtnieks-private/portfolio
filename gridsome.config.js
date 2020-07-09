@@ -18,13 +18,6 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        typeName: 'FrontendMentorChallenge',
-        path: 'content/frontend-mentor-challenges/**/*.md'
-      }
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
         typeName: 'Skill',
         path: 'content/skills.yml'
       }
@@ -38,7 +31,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-netlify-cms-paths',
       options: {
-        contentTypes: ['Example', 'FrontendMentorChallenge'],
+        contentTypes: ['Example'],
         coverField: 'image'
       }
     }
