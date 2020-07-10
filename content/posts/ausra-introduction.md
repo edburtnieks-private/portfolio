@@ -1,5 +1,5 @@
 ---
-slug: ausra-introduction
+slug: ausra-preperation
 title: "Build\_a\_full-stack\_online\_language\_learning\_platform\_from\_start\_to\_finish"
 part: "\U0001F4D6\_(1/4)\_Preparation"
 link: /blog/auszra-preperation/
