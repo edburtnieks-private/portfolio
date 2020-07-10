@@ -39,7 +39,13 @@ import ChevronRightIcon from "~/assets/icons/ChevronRight";
 export default {
   metaInfo() {
     return {
-      title: this.$page.example.title
+      title: this.$page.example.title,
+      meta: [
+        {
+          name: 'monetization',
+          content: '$ilp.uphold.com/XHhwr9YfrhAj',
+        },
+      ],
     };
   },
   components: {
