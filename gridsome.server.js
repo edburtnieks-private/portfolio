@@ -14,7 +14,7 @@ module.exports = function(api) {
         title: String!
         part: String
         link: String!
-        createdAt: DateTime!
+        createdAt: String!
         previousPostTitle: String
         previousPostLink: String
         nextPostTitle: String
