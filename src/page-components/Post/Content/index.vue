@@ -49,7 +49,7 @@ export default {
           font-weight: var(--fw-bold);
         }
 
-        .comming-soon-post {
+        .coming-soon-post {
           color: var(--c-grey-light);
         }
 
