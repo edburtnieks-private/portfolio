@@ -26,7 +26,7 @@ Inspiration from this project came from [Nathaniel Drew's](https://www.youtube.c
 
 After watching the video, I watched it again. Second time around we can start writing down most important notes and become more familiar with this specific method of learning a new language and what it takes. Here we can get as philosophical as we want. As messy or as structured as we want. By having written everything down it gives us more motivation and already some ideas on how to implement certain things. It gets us pumped up, excited and ready to dig in!
 
-I wrote the notes straight into Figma design software. That way I can reference them as quickly as possible without having to search for them when doing research and design. But it doesn't matter what software or media we use. Sometimes pen and paper is the best option!
+I wrote the notes straight into [Figma](https://www.figma.com) design software. That way I can reference them as quickly as possible without having to search for them when doing research and design. But it doesn't matter what software or media we use. Sometimes pen and paper is the best option!
 
 ## ✨ Final notes from the video
 
