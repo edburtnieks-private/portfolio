@@ -16,7 +16,13 @@ import Footer from "~/page-components/Post/Footer";
 export default {
   metaInfo() {
     return {
-      title: `${this.$page.post.part}: ${this.$page.post.title}`
+      title: `${this.$page.post.part}: ${this.$page.post.title}`,
+      meta: [
+        {
+          name: 'monetization',
+          content: '$ilp.uphold.com/XHhwr9YfrhAj',
+        },
+      ],
     };
   },
   components: {
