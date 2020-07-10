@@ -1,8 +1,4 @@
 <template>
-  <!-- <g-link :to="example.node.link">
-    <h3 v-text="example.node.title" class="title" />
-  </g-link> -->
-
   <g-link :to="example.node.link" class="example">
     <g-image :src="example.node.image" :alt="example.node.imageAlt" class="example-image" />
     <div class="overlay">

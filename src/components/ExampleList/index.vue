@@ -1,9 +1,4 @@
 <template>
-  <!-- <ul>
-    <li v-for="example in examples" :key="example.node.id" class="example-list-item">
-      <Example :example="example" />
-    </li>
-  </ul> -->
   <ul class="examples-list">
     <li v-for="example in examples" :key="example.node.id" class="examples-list-item">
       <Example :example="example" />

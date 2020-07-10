@@ -54,5 +54,35 @@ module.exports = function(api) {
         },
       });
     });
+
+    // Posts pages
+    createPage({
+      path: '/blog',
+      component: './src/templates/Posts.vue',
+    });
+
+    const { data: postsData } = await graphql(`
+      {
+        posts: allPost {
+          edges {
+            node {
+              id
+              slug
+              title
+            }
+          }
+        }
+      }
+    `);
+
+    postsData.posts.edges.forEach(({ node }) => {
+      createPage({
+        path: `/blog/${node.slug}`,
+        component: './src/templates/Post.vue',
+        context: {
+          id: node.id
+        },
+      });
+    });
   });
 };

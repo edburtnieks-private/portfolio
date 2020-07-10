@@ -18,6 +18,13 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        typeName: 'Post',
+        path: 'content/posts/**/*.md'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         typeName: 'Skill',
         path: 'content/skills.yml'
       }
@@ -31,7 +38,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-netlify-cms-paths',
       options: {
-        contentTypes: ['Example'],
+        contentTypes: ['Example', 'Post'],
         coverField: 'image'
       }
     }

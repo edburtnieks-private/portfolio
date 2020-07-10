@@ -9,24 +9,6 @@
     </Container>
 
     <Container withoutHorizontalPadding>
-      <!-- <ul class="examples-list">
-        <li
-          v-for="example in $page.examples.edges"
-          :key="example.node.id"
-          class="examples-list-item"
-        >
-          <g-link :to="example.node.link" class="example">
-            <g-image :src="example.node.image" :alt="example.node.imageAlt" class="example-image" />
-            <div class="overlay">
-              <h2 class="example-title" v-text="example.node.title" />
-              <small class="explore">
-                Explore
-                <ChevronRight />
-              </small>
-            </div>
-          </g-link>
-        </li>
-      </ul> -->
       <ExampleList :examples="$page.examples.edges" />
     </Container>
   </Layout>

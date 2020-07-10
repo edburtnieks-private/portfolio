@@ -42,3 +42,20 @@ collections:
             fields:
               - { label: "Category", name: "category", widget: "string" }
               - { label: "Skills", name: "skills", widget: "list" }
+  - name: "posts"
+    label: "Post"
+    folder: "content/posts"
+    create: true
+    slug: "{{fields.slug}}"
+    sortableFields: ["createdAt"]
+    fields:
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Part", name: "part", widget: "string" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: 'Created at', name: 'createdAt', widget: 'datetime', dateFormat: "YYYY-MM-DD" }
+      - { label: "Previous post title", name: "previousPostTitle", widget: "string" }
+      - { label: "Previous post link", name: "previousPostLink", widget: "string" }
+      - { label: "Next post title", name: "nextPostTitle", widget: "string" }
+      - { label: "Next post link", name: "nextPostLink", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
