@@ -1,13 +1,11 @@
 <template>
   <small class="created-date">
     Created
-    <time v-text="formattedCreatedAtDate" :datetime="createdDate" />
+    <time v-text="createdDate" :datetime="formattedCreatedAtDate" />
   </small>
 </template>
 
 <script>
-import { format } from "date-fns";
-
 export default {
   props: {
     createdDate: {
@@ -17,7 +15,11 @@ export default {
   },
   computed: {
     formattedCreatedAtDate() {
-      return format(new Date(this.createdDate), "MMMM do, y");
+      const date = new Date(this.createdDate);
+      const year = date.getFullYear();
+      const month = (date.getMonth() + 1).toString().padStart(2, '0');
+      const day = date.getDate();
+      return `${year}-${month}-${day}`;
     }
   }
 };

@@ -42,7 +42,7 @@ query {
         title
         part
         link
-        createdAt
+        createdAt (format: "MMMM D, YYYY")
       }
     }
   }

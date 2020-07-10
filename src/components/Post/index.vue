@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import { format } from "date-fns";
 import Part from "~/page-components/Post/Part";
 import Title from "~/page-components/Post/Title";
 import CreatedDate from "~/page-components/Post/CreatedDate";
@@ -24,11 +23,6 @@ export default {
     post: {
       type: Object,
       required: true
-    }
-  },
-  computed: {
-    formattedCreatedAtDate() {
-      return format(new Date(this.post.node.createdAt), "MMMM do, y");
     }
   }
 };

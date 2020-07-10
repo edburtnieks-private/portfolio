@@ -5,8 +5,8 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = function(api) {
-  api.loadSource(async ({ addSchemaTypes }) => {
+module.exports = function (api) {
+  api.loadSource(async ({ addSchemaTypes, addSchemaResolvers }) => {
     addSchemaTypes(`
       type Post implements Node {
         id: ID!
@@ -14,13 +14,13 @@ module.exports = function(api) {
         title: String!
         part: String
         link: String!
-        createdAt: String!
+        createdAt: Date!
         previousPostTitle: String
         previousPostLink: String
         nextPostTitle: String
         nextPostLink: String
       }
-    `)
+    `);
   });
 
   api.createPages(async ({ graphql, createPage }) => {
@@ -93,7 +93,7 @@ module.exports = function(api) {
           path: `/blog/${node.slug}`,
           component: './src/templates/Post.vue',
           context: {
-            id: node.id
+            id: node.id,
           },
         });
       });

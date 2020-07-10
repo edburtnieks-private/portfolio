@@ -32,7 +32,7 @@ query ($id: ID) {
   post(id: $id) {
     title
     part
-    createdAt
+    createdAt (format: "MMMM D, YYYY")
     content
     previousPostTitle
     previousPostLink
