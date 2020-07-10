@@ -51,7 +51,7 @@ collections:
     fields:
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Part", name: "part", widget: "string" }
+      - { label: "Part", name: "part", widget: "string", required: false }
       - { label: "Link", name: "link", widget: "string" }
       - { label: 'Created at', name: 'createdAt', widget: 'datetime', dateFormat: "YYYY-MM-DD" }
       - { label: "Previous post title", name: "previousPostTitle", widget: "string", required: false }

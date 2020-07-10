@@ -6,8 +6,21 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function(api) {
-  api.loadSource(async ({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+  api.loadSource(async ({ addSchemaTypes }) => {
+    addSchemaTypes(`
+      type Post implements Node {
+        id: ID!
+        slug: String!
+        title: String!
+        part: String
+        link: String!
+        createdAt: DateTime!
+        previousPostTitle: String
+        previousPostLink: String
+        nextPostTitle: String
+        nextPostLink: String
+      }
+    `)
   });
 
   api.createPages(async ({ graphql, createPage }) => {
