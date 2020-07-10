@@ -54,8 +54,8 @@ collections:
       - { label: "Part", name: "part", widget: "string" }
       - { label: "Link", name: "link", widget: "string" }
       - { label: 'Created at', name: 'createdAt', widget: 'datetime', dateFormat: "YYYY-MM-DD" }
-      - { label: "Previous post title", name: "previousPostTitle", widget: "string" }
-      - { label: "Previous post link", name: "previousPostLink", widget: "string" }
-      - { label: "Next post title", name: "nextPostTitle", widget: "string" }
-      - { label: "Next post link", name: "nextPostLink", widget: "string" }
+      - { label: "Previous post title", name: "previousPostTitle", widget: "string", required: false }
+      - { label: "Previous post link", name: "previousPostLink", widget: "string", required: false }
+      - { label: "Next post title", name: "nextPostTitle", widget: "string", required: false }
+      - { label: "Next post link", name: "nextPostLink", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
