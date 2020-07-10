@@ -75,14 +75,16 @@ module.exports = function(api) {
       }
     `);
 
-    postsData.posts.edges.forEach(({ node }) => {
-      createPage({
-        path: `/blog/${node.slug}`,
-        component: './src/templates/Post.vue',
-        context: {
-          id: node.id
-        },
+    if (postsData) {
+      postsData.posts.edges.forEach(({ node }) => {
+        createPage({
+          path: `/blog/${node.slug}`,
+          component: './src/templates/Post.vue',
+          context: {
+            id: node.id
+          },
+        });
       });
-    });
+    }
   });
 };
