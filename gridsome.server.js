@@ -68,7 +68,6 @@ module.exports = function(api) {
             node {
               id
               slug
-              title
             }
           }
         }
