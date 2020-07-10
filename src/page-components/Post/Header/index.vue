@@ -1,7 +1,7 @@
 <template>
   <Container>
     <header>
-      <Part :part="post.part" />
+      <Part v-if="post.part" :part="post.part" />
       <Title :title="post.title" main />
       <CreatedDate :createdDate="post.createdAt" />
     </header>

@@ -1,7 +1,7 @@
 <template>
   <g-link :to="post.node.link" class="post-link">
     <article>
-      <Part :part="post.node.part" />
+      <Part v-if="post.node.part" :part="post.node.part" />
       <Title :title="post.node.title" />
       <CreatedDate :createdDate="post.node.createdAt" />
     </article>
