@@ -4,7 +4,7 @@ title: Build a full-stack online language learning platform from start to finish
 part: "\U0001F50D (2/4) Research"
 link: /blog/auszra-research
 createdAt: 2020-07-14T22:02:22.349Z
-previousPostTitle: "\U0001F4D6 (2/4) Preparation: Build a full-stack online language learning platform from start to finish"
+previousPostTitle: "\U0001F4D6 (1/4) Preparation: Build a full-stack online language learning platform from start to finish"
 previousPostLink: /blog/auszra-preparation
 ---
 This is the second post of a four part series where we will start asking the questions about the project, create user stories and start planning out the initial structure of the site.
