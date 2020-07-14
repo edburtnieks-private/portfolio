@@ -12,9 +12,9 @@ This is the second post of a four part series where we will start asking the que
 ## ➡ Jump to the other parts
 
 * [📖 (1/4) Preparation: Build a full-stack online language learning platform from start to finish](/blog/auszra-preparation/)
-* <span class="current-post">🔍 (2/4) Research: Build a full-stack online language learning platform from start to finish (this post)</span>
-* <span class="coming-soon-post">🎨 (3/4) Design: Build a full-stack online language learning platform from start to finish (coming soon)</span>
-* <span class="coming-soon-post">⌨ (4/4) Development: Build a full-stack online language learning platform from start to finish (coming soon)</span>
+* <span class="current-post">🔍 (2/4) Research: Build a full-stack online language learning platform from start to finish (this post)</span>
+* 🎨 (3/4) Design: Build a full-stack online language learning platform from start to finish (coming soon)
+* ⌨ (4/4) Development: Build a full-stack online language learning platform from start to finish (coming soon)
 
 ## ❔ Asking the initial questions
 
@@ -35,6 +35,7 @@ Well...someone who wants to learn a new language.
 * Search online
 * Word of mouth
 * See it from external source
+
   * Content creator
   * Review
   * Social media
