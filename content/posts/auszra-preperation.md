@@ -1,8 +1,8 @@
 ---
-slug: auszra-preperation
+slug: auszra-preparation
 title: Build a full-stack online language learning platform from start to finish
 part: "\U0001F4D6 (1/4) Preparation"
-link: /blog/auszra-preperation/
+link: /blog/auszra-preparation/
 createdAt: 2020-07-10T00:00:00.000Z
 ---
 ## 👋 Introduction
