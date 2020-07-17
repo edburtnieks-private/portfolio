@@ -24,7 +24,7 @@ In short, by answering these questions we will learn about our potential users, 
 
 Remember that we can always come back to this and add or modify some answers as new ideas come to mind later on. In fact we will come back to this later. But it's important to get started and have at least some simple foundation.
 
-Okay, let's start...
+Okay, let's start by asking some questions.
 
 ### 1. Who will be using the website / application?
 
@@ -32,15 +32,18 @@ Well...someone who wants to learn a new language.
 
 ### 2. How people will find the website / application?
 
+It is helpful to think before hand on how our users will actually end up at our website.
+
 * Search online
 * Word of mouth
 * See it from external source
-
   * Content creator
   * Review
   * Social media
 
 ### 3. What people will do on the website? What goal do they have?
+
+Again, it's important that we don't dig into the features and implementation details. Instead just think what our users might expect to do and achieve once they land on our website.
 
 * Get to know and learn about this specific method of learning a new language
 * See clear steps and be guided each step of the way
@@ -49,12 +52,16 @@ Well...someone who wants to learn a new language.
 
 ### 4. How can I help?
 
+Based on previous questions on what our users would want to do, we can provide our solutions to those problems.
+
 * Introduction and inspiration about this specific method of learning a new language
 * Clear steps and application that will save time by using this method
 * Responsive design
 * Translate site in different languages
 
 ### 5. Who are the competitors? What have they done?
+
+Sometimes it is useful to see what similar existing tools, websites, applications exist out there. What makes your one stand out? What are the common features between them? What are the noticable differences that makes one better than other?
 
 * Duolingo
 * Memrise
