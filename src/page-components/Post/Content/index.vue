@@ -35,6 +35,13 @@ export default {
       padding: 2rem 0 0;
     }
 
+    h3 {
+      line-height: 2rem;
+      margin: 0 auto;
+      max-width: 35rem;
+      padding: 2rem 0 0;
+    }
+
     ul {
       margin: 0 auto;
       max-width: 35rem;
