@@ -68,6 +68,17 @@ export default {
             content: none;
           }
         }
+
+        > p {
+          font-size: inherit;
+          line-height: inherit;
+          padding: 0;
+        }
+
+        > ul {
+          padding-bottom: 0;
+          padding-top: 0.5rem;
+        }
       }
     }
 

@@ -5,6 +5,11 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const fs = require('fs');
+const path = require('path');
+const { createAgent } = require('notionapi-agent');
+const { getOnePageAsTree, getAllBlocksInOnePage } = require('nast-util-from-notionapi');
+
 module.exports = function (api) {
   api.loadSource(async ({ addSchemaTypes, addSchemaResolvers }) => {
     addSchemaTypes(`
@@ -69,6 +74,107 @@ module.exports = function (api) {
     });
 
     // Posts pages
+    const agent = createAgent({ token: process.env.NOTION_TOKEN });
+    const postsPageId = process.env.NOTION_POSTS_PAGE_ID;
+    const blocks = await getAllBlocksInOnePage(postsPageId, agent);
+
+    blocks.forEach(async (block) => {
+      if (block.type === 'page' && block.id !== postsPageId) {
+        const pageId = block.id;
+        const tree = await getOnePageAsTree(pageId, agent);
+
+        let fileName = pageId;
+        let frontmatter = '';
+        let content = '';
+
+        tree.children.forEach((child) => {
+          // Paragraph
+          if (child.type === 'text') {
+            if (child.title.length) {
+              child.title.forEach((titlePart) => {
+                content += titlePart[0];
+              });
+
+              content += '\n\n';
+            } else {
+              content += '\n';
+            }
+          }
+
+          // Heading
+          if (child.type === 'heading') {
+            content += `${'#'.repeat(child.depth)} `;
+
+            child.title.forEach((titlePart) => {
+              content += titlePart[0];
+            });
+
+            content += '\n\n';
+          }
+
+          // Bullet list
+          if (child.type === 'bulleted_list') {
+            content += '* ';
+
+            child.title.forEach((titlePart) => {
+              content += titlePart[0];
+            });
+
+            content += '\n';
+
+            // Nested bullet list
+            if (child.children.length) {
+              child.children.forEach((nestedBulletListChild) => {
+                content += '  * ';
+
+                nestedBulletListChild.title.forEach((titlePart) => {
+                  content += titlePart[0];
+                });
+
+                content += '\n';
+              });
+            }
+          }
+
+          // Link
+          if (Array.isArray(child.title) && child.title.length) {
+            child.title.forEach((titlePart) => {
+              if (titlePart.length === 2 && titlePart[1][0][0] === 'a') {
+                content = content.replace(titlePart[0], `[${titlePart[0]}](${titlePart[1][0][1]})`);
+              }
+            });
+          }
+
+          // Frontmatter
+          if (child.type === 'collection_inline') {
+            frontmatter += '---';
+            frontmatter += '\n';
+
+            child.children.forEach((nestedChild) => {
+              frontmatter += `${nestedChild.properties.title[0][0]}: ${nestedChild.properties.PJ38[0][0]}`;
+              frontmatter += '\n';
+
+              if (nestedChild.properties.title[0][0] === 'slug') {
+                fileName = nestedChild.properties.PJ38[0][0];
+              }
+            });
+
+            frontmatter += '---';
+            frontmatter += '\n';
+
+          }
+        });
+
+        content = frontmatter.concat(content);
+
+        fs.writeFileSync(
+          path.join(__dirname, `/content/posts/${fileName}.md`),
+          content,
+          { encoding: 'utf-8' },
+        );
+      }
+    });
+
     createPage({
       path: '/blog',
       component: './src/templates/Posts.vue',
