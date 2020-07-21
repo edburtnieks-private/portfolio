@@ -15,13 +15,15 @@ export default {
 
 <style lang="scss" scoped>
 .content-container {
+  letter-spacing: 1px;
+  
   &::v-deep {
     p {
       font-size: 1.125rem;
       line-height: 2rem;
       margin: 0 auto;
-      max-width: 35rem;
-      padding: 2rem 0;
+      max-width: 45rem;
+      padding: 0 0 2rem;
     }
 
     a {
@@ -31,30 +33,26 @@ export default {
     h2 {
       line-height: 2rem;
       margin: 0 auto;
-      max-width: 35rem;
-      padding: 2rem 0 0;
+      max-width: 45rem;
+      padding: 1rem 0 2rem;
     }
 
     h3 {
       line-height: 2rem;
       margin: 0 auto;
-      max-width: 35rem;
-      padding: 2rem 0 0;
+      max-width: 45rem;
+      padding: 1rem 0 2rem;
     }
 
-    ul {
+    ul,
+    ol {
       margin: 0 auto;
-      max-width: 35rem;
+      max-width: 45rem;
       padding-bottom: 2rem;
-      padding-top: 2rem;
 
       li {
         line-height: 1.5rem;
         padding: 0.5rem;
-
-        .current-post {
-          font-weight: var(--fw-bold);
-        }
 
         .coming-soon-post {
           color: var(--c-grey-light);
@@ -67,6 +65,18 @@ export default {
           &::after {
             content: none;
           }
+        }
+
+        > p {
+          font-size: inherit;
+          line-height: inherit;
+          padding: 0;
+        }
+
+        > ul,
+        > ol {
+          padding-bottom: 0;
+          padding-top: 0.5rem;
         }
       }
     }
@@ -90,6 +100,11 @@ export default {
           text-align: center;
         }
       }
+    }
+
+    hr {
+      margin: 0 auto 2rem;
+      max-width: 45rem;
     }
   }
 }
