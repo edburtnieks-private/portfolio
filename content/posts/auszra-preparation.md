@@ -4,6 +4,8 @@ title: Build a full-stack online language learning platform from start to finish
 part: 📖 (1/4) Preparation
 link: /blog/auszra-preparation/
 createdAt: 2020-07-10
+nextPostTitle: "🔍 (2/4) Research: Build a full-stack online language learning platform from start to finish (website)"
+nextPostLink: /blog/auszra-research/
 ---
 ## 👋 Introduction
 
