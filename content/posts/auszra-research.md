@@ -207,7 +207,7 @@ We can already start thinking of possible body copy, page and section titles, im
 
 ### Language page
 
-* __H1:__ Most common <number> words in <language>
+* __H1:__ Most common &lt;number&gt; words in &lt;language&gt;
 * __List of most common 1000-2000 words__
     * Word in the target language
     * Word in your language
