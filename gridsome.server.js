@@ -31,6 +31,8 @@ module.exports = function (api) {
   api.createPages(async ({ graphql, createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
 
+    const agent = createAgent({ token: process.env.NOTION_TOKEN });
+
     // Examples pages
     createPage({
       path: '/examples',
@@ -74,35 +76,34 @@ module.exports = function (api) {
     });
 
     // Posts pages
-    const agent = createAgent({ token: process.env.NOTION_TOKEN });
     const postsPageId = process.env.NOTION_POSTS_PAGE_ID;
 
     try {
-      const blocks = await getAllBlocksInOnePage(postsPageId, agent);
+      const postsPageblocks = await getAllBlocksInOnePage(postsPageId, agent);
 
-      blocks.forEach(async (block) => {
+      postsPageblocks.forEach(async (block) => {
         if (block.type === 'page' && block.id !== postsPageId) {
-          const pageId = block.id;
+          const postPageId = block.id;
 
           try {
-            const tree = await getOnePageAsTree(pageId, agent);
+            const postTree = await getOnePageAsTree(postPageId, agent);
 
-            let fileName = pageId;
+            let postFileName = postPageId;
             let frontmatter = '';
             let content = '';
 
             // Save page tree in file
             // try {
             //   fs.writeFileSync(
-            //     path.join(__dirname, `/${fileName}.json`),
-            //     JSON.stringify(tree),
+            //     path.join(__dirname, `/${postFileName}.json`),
+            //     JSON.stringify(postTree),
             //     { encoding: 'utf-8' },
             //   );
             // } catch (error) {
-            //   console.error(`Error while writing file to path "${fileName}.json": `, error);
+            //   console.error(`Error while writing file to path "${postFileName}.json": `, error);
             // }
 
-            tree.children.forEach((child) => {
+            postTree.children.forEach((child) => {
               // Paragraph
               if (child.type === 'text') {
                 if (child.title.length) {
@@ -234,7 +235,7 @@ module.exports = function (api) {
                   frontmatter += '\n';
 
                   if (nestedChild.properties.title[0][0] === 'slug') {
-                    fileName = nestedChild.properties.PJ38[0][0];
+                    postFileName = nestedChild.properties.PJ38[0][0];
                   }
                 });
 
@@ -248,12 +249,12 @@ module.exports = function (api) {
 
             try {
               fs.writeFileSync(
-                path.join(__dirname, `/content/posts/${fileName}.md`),
+                path.join(__dirname, `/content/posts/${postFileName}.md`),
                 content,
                 { encoding: 'utf-8' },
               );
             } catch (error) {
-              console.error(`Error while writing file to path "/content/posts/${fileName}.md": `, error);
+              console.error(`Error while writing file to path "/content/posts/${postFileName}.md": `, error);
             }
           } catch (error) {
             console.error('Error while trying to get Notion page tree: ', error);
@@ -292,6 +293,71 @@ module.exports = function (api) {
           },
         });
       });
+    }
+
+    // Contributed
+    const contributedProjectsPageId = process.env.NOTION_CONTRIBUTED_PROJECTS_PAGE_ID;
+
+    try {
+      const contributedProjectsBlocks = await getAllBlocksInOnePage(contributedProjectsPageId, agent);
+
+      contributedProjectsBlocks.forEach(async (block) => {
+        if (block.type === 'page' && block.id !== contributedProjectsPageId) {
+          const contributedProjectPageId = block.id;
+
+          try {
+            const contributedProjectTree = await getOnePageAsTree(contributedProjectPageId, agent);
+
+            let contributedProjectFileName = contributedProjectPageId;
+            let frontmatter = '';
+
+            // Save page tree in file
+            // try {
+            //   fs.writeFileSync(
+            //     path.join(__dirname, `/${contributedProjectFileName}.json`),
+            //     JSON.stringify(contributedProjectTree),
+            //     { encoding: 'utf-8' },
+            //   );
+            // } catch (error) {
+            //   console.error(`Error while writing file to path "${contributedProjectFileName}.json": `, error);
+            // }
+
+            contributedProjectTree.children.forEach((child) => {
+              // Frontmatter
+              if (child.type === 'collection_inline') {
+                frontmatter += '---';
+                frontmatter += '\n';
+
+                child.children.forEach((nestedChild) => {
+                  frontmatter += `${nestedChild.properties.title[0][0]}: ${nestedChild.properties['uw.c'][0][0]}`;
+                  frontmatter += '\n';
+
+                  if (nestedChild.properties.title[0][0] === 'slug') {
+                    contributedProjectFileName = nestedChild.properties['uw.c'][0][0];
+                  }
+                });
+
+                frontmatter += '---';
+                frontmatter += '\n';
+              }
+            });
+
+            try {
+              fs.writeFileSync(
+                path.join(__dirname, `/content/contributed-projects/${contributedProjectFileName}.md`),
+                frontmatter,
+                { encoding: 'utf-8' },
+              );
+            } catch (error) {
+              console.error(`Error while writing file to path "/content/contributed-projects/${contributedProjectFileName}.md": `, error);
+            }
+          } catch (error) {
+            console.error('Error while trying to get Notion page tree: ', error);
+          }
+        }
+      });
+    } catch (error) {
+      console.error('Error while trying to get Notion page blocks: ', error);
     }
   });
 };
