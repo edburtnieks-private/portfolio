@@ -65,15 +65,15 @@ Based on previous answers  we can provide our solutions to those problems.
 
 Sometimes it is useful to see what similar tools, websites, applications already exist out there. What will make our one stand out? What are the common features between them? What are the noticeable differences that make one better than others?
 
-* Duolingo
-* Memrise
-* Verbling
-* Busuu
-* Loecsen
-* Learn101
-* Mango
-* Babbel
-* italki
+* [Duolingo](https://www.duolingo.com/)
+* [Memrise](https://www.memrise.com/)
+* [Verbling](Verbling)
+* [Busuu](https://www.busuu.com/)
+* [Loecsen](https://www.loecsen.com/)
+* [Learn101](http://learn101.org/)
+* [Mango](https://mangolanguages.com/)
+* [Babbel](https://www.babbel.com/)
+* [italki](https://www.italki.com/)
 
 ### Additional useful resources for language learning
 
