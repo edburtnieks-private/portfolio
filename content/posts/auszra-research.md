@@ -67,7 +67,7 @@ Sometimes it is useful to see what similar tools, websites, applications already
 
 * [Duolingo](https://www.duolingo.com/)
 * [Memrise](https://www.memrise.com/)
-* [Verbling](Verbling)
+* [Verbling](https://www.verbling.com/)
 * [Busuu](https://www.busuu.com/)
 * [Loecsen](https://www.loecsen.com/)
 * [Learn101](http://learn101.org/)
