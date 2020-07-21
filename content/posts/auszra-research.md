@@ -3,11 +3,13 @@ slug: auszra-research
 title: Build a full-stack online language learning platform from start to finish (website)
 part: 🔍 (2/4) Research
 link: /blog/auszra-research/
-createdAt: 2020-07-20
+createdAt: 2020-07-21
 previousPostTitle: "📖 (1/4) Preparation: Build a full-stack online language learning platform from start to finish (website)"
 previousPostLink: /blog/auszra-preparation/
 ---
-This is the second post of a four part series where we will start asking the questions about the project, create user stories and start planning out the initial structure of the site.
+This is the second post of a four-part series where we will start asking the questions about the project, create user stories, and start planning out the initial structure of the site.
+
+As with the notes, I wrote everything straight into [Figma](https://www.figma.com/).
 
 ## ➡ Jump to the other parts
 
@@ -18,32 +20,32 @@ This is the second post of a four part series where we will start asking the que
 
 ## ❔ Asking the initial questions
 
-After doing some brief research and writing down the notes about the language learning method, we can start asking some questions to help us narrow down the scope, features. It's important to not think about all the features from the technical and implementation side. We can start thinking and keep some brief ideas in the back of our mind, but that's not the goal. Asking these initial questions will help us to do that in the future as well as shape the content.
+After doing some brief research and writing down the notes about the language learning method, we can start asking some questions to help us narrow down the scope, features. It's important to not think about all the features from the technical and implementation side. We can start thinking and keep some brief ideas in the back of our minds, but that's not the goal. Asking these initial questions will help us to do that in the future as well as shape the content.
 
-In short, by answering these questions we will learn about our potential users, that in turn will help us identify their problems and creating the solutions to solve those problems.
+In short, by answering these questions we will learn about our potential users, which in turn will help us identify their problems and create solutions to solve those problems.
 
-Remember that we can always come back to this and add or modify the answers as new ideas come to mind later on. In fact we will come back to this later. But it's important to get started and have at least some simple foundation.
+We can always come back to this and add or modify the answers as new ideas come to mind later on. But it's important to get started and have at least some simple foundation.
 
 Okay, let's start by asking some questions.
 
-### 1. Who will be using the website / application?
+### 1. Who will be using the website, application?
 
 Well...someone who wants to learn a new language.
 
 ### 2. How people will find the website?
 
-It is helpful to think before hand on how our users will actually end up at our website.
+It is helpful to think beforehand on how our users will actually end up on our website.
 
 * Search online
 * Word of mouth
-* See it from external source
+* See it from an external source
     * Content creator
     * Review
     * Social media
 
 ### 3. What people will do on the website? What goal do they have?
 
-Again, we don't want to dig into the features and implementation details at this point. Instead we think about what our users might expect to be able to do and achieve, once they land on our website.
+Again, we don't want to dig into the features and implementation details at this point. Instead, we think about what our users might expect to be able to do and achieve, once they land on our website.
 
 * Get to know and learn about this specific method of learning a new language
 * See clear steps and be guided each step of the way
@@ -57,11 +59,11 @@ Based on previous answers  we can provide our solutions to those problems.
 * Introduction and inspiration about this specific method of learning a new language
 * Clear steps and application that will save time by using this method
 * Responsive design
-* Translate site in different languages
+* Translate the site in different languages
 
 ### 5. Who are the competitors? What have they done?
 
-Sometimes it is useful to see what similar existing tools, websites, applications exist out there. What makes our one stand out? What are the common features between them? What are the noticeable differences that makes one better than other?
+Sometimes it is useful to see what similar tools, websites, applications already exist out there. What will make our one stand out? What are the common features between them? What are the noticeable differences that make one better than others?
 
 * Duolingo
 * Memrise
@@ -75,7 +77,7 @@ Sometimes it is useful to see what similar existing tools, websites, application
 
 ### Additional useful resources for language learning
 
-I decided to add some additional resources I have picked up in my free time, not specifically for our project. People I follow that are into language learning and teaching.
+I decided to add some additional resources I have picked up in my free time, not specifically for this project. People I follow that are into language learning and teaching.
 
 * [12 BEST FREE LANGUAGE APPS AND WEBSITES](https://www.youtube.com/watch?v=EKWXOtWfbUE)
 * [Days of French 'n' Swedish YouTube channel](https://www.youtube.com/channel/UC3_iSRqqZ7DTVlBNd9lv8jA)
@@ -85,7 +87,7 @@ I decided to add some additional resources I have picked up in my free time, not
 
 Based on the initial questions we answered previously we can start digging deeper into details who will actually be using our application. What they are expecting to be able to do? For what reason?
 
-For user stories we can stick with the most simplest format:
+For user stories we can stick with the simplest format:
 
 1. __As (who?)__
 1. __I want to (obstacle)__
@@ -94,38 +96,39 @@ For user stories we can stick with the most simplest format:
 Let's apply this format and come up with few personas. The more we can think of, the better.
 
 1. __As__ someone who is brand new and specifically looking to learn a new language for the first time
-1. __I want to__
-    * learn about the process, see what it takes and how difficult it is
-    * try the method as soon as possible
-1. __so that I can__ decide if I want to continue using this method and application
+1. __I want to__ learn about the process, see what it takes and how difficult it is
+1. __so that I can__ try the method and application
 ---
 1. __As__ someone who has tried online language learning before with no success
 1. __I want to__ learn about the process of this method
 1. __so that I can__
-    * see how it’s different from other online language learning methods / apps
+    * try the method and application
+    * see how it’s different from other online language learning methods, apps
     * change my mindset about learning languages
 ---
-1. __As__ someone who has experience with language learning and has successfully done that
-1. __I want to__ learn about the process of this method and try it for the next language
-1. __so that I can__ see how it’s different from other online language learning methods / apps
+1. __As__ someone who has experience with language learning and has successfully learned a language
+1. __I want to__ learn about the process of this method
+1. __so that I can__
+    * try the method and application for the next language
+    * see how it’s different from other online language learning methods, apps
 ---
 1. __As__ someone who has just found about online language learning from other sources
-1. __I want to__ learn about the process of this method and try it for the next language
-1. __so that I can__ decide if learning a new language is for me at this point in time
+1. __I want to__ learn about the process of this method
+1. __so that I can__ try the method and application
 ---
-1. __As__ someone who is skeptical about online language learning
+1. __As__ someone skeptical about online language learning
 1. __I want to__ change my mindset about online language learning
 1. __so that I can__ try online language learning
 ---
-1. __As__ a class teacher / mentor
-1. __I want to__ see how easy and intuitive it is to use this method
-1. __so that I can__ recommend it to students / others
+1. __As__ a teacher or mentor
+1. __I want to__ see how easy and intuitive it is to use this method and application
+1. __so that I can__ recommend it to students, other people
 ---
 1. __As__ someone who is already familiar with this method or is returning visitor
-1. __I want to__ quickly start using and applying it
+1. __I want to__ quickly start using the application
 1. __so that I can__ learn a new language / continue learning as quickly as possible
 ---
-1. __As__ someone who has decided to learn a new language, but not sure which one
+1. __As__ someone who wants to learn a new language, but not sure which one
 1. __I want to__ see a list of languages available
 1. __so that I can__ choose a language to learn
 ---
@@ -134,16 +137,16 @@ Let's apply this format and come up with few personas. The more we can think of,
 1. __so that I can__ start using the application and learn it
 ---
 1. __As__ someone who is not speaking English
-1. __I want to__ be able to use website and application in different language
+1. __I want to__ be able to use website and application in a different language
 1. __so that I can__ learn a new language
 
-Quite a few __obstacles __or __intentions __will overlap. That's good. That means we can already start thinking about prioritizing features, content and architecture that will provide most value for as many people as possible.
+Quite a few __obstacles __or __intentions __will overlap. That's good. That means we can already start thinking about prioritizing features, content, and architecture that will provide the most value for as many people as possible.
 
 ## 🏛 Information architecture
 
-Based on the user stories we can start creating the outline, content structure of our web application, including:
+Based on the user stories we can start creating the outline, content structure of our web application. That may include:
 
-* Top level pages
+* Top-level pages
 * Page sections
 * Navigations
 * Header
@@ -162,9 +165,9 @@ We can already start thinking of possible body copy, page and section titles, im
 ### Footer
 
 * Logo (image, link)
-* Site navigation (links)
+* Site navigation (navigation links)
 * Privacy policy (link)
-* Terms of service / Terms of use (link)
+* Terms of Service / Terms of Use (link)
 * Copyright (text)
 * Sitemap (link)
 
@@ -187,7 +190,7 @@ We can already start thinking of possible body copy, page and section titles, im
 * __Benefits__
     * Heading
     * Paragraph
-* __Process / steps__
+* __Process/steps__
     * For each one Heading and Paragraph
     * __0\. Finding Your Mission__
     * __1\. Gathering the Building Blocks__
@@ -204,6 +207,7 @@ We can already start thinking of possible body copy, page and section titles, im
 
 ### Language page
 
+* __H1:__ Most common <number> words in <language>
 * __List of most common 1000-2000 words__
-    * Word in target language
+    * Word in the target language
     * Word in your language
