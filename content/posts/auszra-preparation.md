@@ -1,9 +1,11 @@
 ---
 slug: auszra-preparation
-title: Build a full-stack online language learning platform from start to finish
-part: "\U0001F4D6 (1/4) Preparation"
+title: Build a full-stack online language learning platform from start to finish (website)
+part: 📖 (1/4) Preparation
 link: /blog/auszra-preparation/
-createdAt: 2020-07-10T00:00:00.000Z
+createdAt: 2020-07-10
+nextPostTitle: "🔍 (2/4) Research: Build a full-stack online language learning platform from start to finish (website)"
+nextPostLink: /blog/auszra-research/
 ---
 ## 👋 Introduction
 
@@ -17,10 +19,10 @@ Inspiration from this project came from [Nathaniel Drew's](https://www.youtube.c
 
 ## ➡ Jump to the other parts
 
-* <span class="current-post">📖 (1/4) Preparation: Build a full-stack online language learning platform from start to finish (this post)</span>
-* <span class="coming-soon-post">🔍 (2/4) Research: Build a full-stack online language learning platform from start to finish (coming soon)</span>
-* <span class="coming-soon-post">🎨 (3/4) Design: Build a full-stack online language learning platform from start to finish (coming soon)</span>
-* <span class="coming-soon-post">⌨ (4/4) Development: Build a full-stack online language learning platform from start to finish (coming soon)</span>
+* __📖 (1/4) Preparation: Build a full-stack online language learning platform from start to finish (website) (this post)__
+* [🔍 (2/4) Research: Build a full-stack online language learning platform from start to finish (website)](/blog/auszra-research/)
+* <span class="coming-soon-post">🎨 (3/4) Design: Build a full-stack online language learning platform from start to finish (website) (coming soon)</span>
+* <span class="coming-soon-post">⌨ (4/4) Development: Build a full-stack online language learning platform from start to finish (website) (coming soon)</span>
 
 ## 📝 Take the notes
 
@@ -35,3 +37,4 @@ I wrote the notes straight into [Figma](https://www.figma.com) design software. 
 ![Final notes from the video](/uploads/auszra-final-notes-from-the-video.png)
 
 </div>
+
