@@ -1,26 +1,31 @@
 <template>
   <footer class="footer">
-    <a href="mailto:edburtnieks@gmail.com">Write an email - edburtnieks@gmail.com</a>
-    <small class="copyright">&copy; Copyright 2020, {{ $static.metadata.siteName }}</small>
+    <Section id="contact" title="Hire me or send a message">
+      <ContactForm />
+    </Section>
+
+    <div class="copyright">
+      <small>&copy; Copyright 2020, {{ $static.metadata.siteName }}</small>
+    </div>
   </footer>
 </template>
 
-<style scoped>
+<script>
+import Section from "~/containers/Section";
+import ContactForm from "~/components/ContactForm";
+
+export default {
+  components: {
+    Section,
+    ContactForm,
+  },
+};
+</script>
+
+<style lang="scss" scoped>
 .copyright {
-  display: block;
-  margin-top: 3rem;
-}
-
-@media (min-width: 768px) {
-  .footer {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .copyright {
-    margin-top: 0;
-  }
+  display: flex;
+  justify-content: flex-end;
 }
 </style>
 

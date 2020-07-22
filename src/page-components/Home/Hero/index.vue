@@ -9,7 +9,7 @@
       </div>
     </h1>
 
-    <a href="mailto:edburtnieks@gmail.com">Write an email - edburtnieks@gmail.com</a>
+    <a href="#contact">Hire me or send a message</a>
   </Section>
 </template>
 
