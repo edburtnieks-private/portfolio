@@ -2,6 +2,7 @@
   <Layout home>
     <Hero />
     <Examples :examples="$page.examples.edges" />
+    <ContributedProjects :projects="$page.contributedProjects.edges" />
     <Skills :skills="$page.skills.edges[0].node.skills" />
   </Layout>
 </template>
@@ -10,6 +11,7 @@
 import Section from "~/containers/Section";
 import Hero from "~/page-components/Home/Hero";
 import Examples from "~/page-components/Home/Examples";
+import ContributedProjects from "~/page-components/Home/ContributedProjects";
 import Skills from "~/page-components/Home/Skills";
 
 export default {
@@ -20,6 +22,7 @@ export default {
     Section,
     Hero,
     Examples,
+    ContributedProjects,
     Skills
   }
 };
@@ -28,6 +31,17 @@ export default {
 <page-query>
 query {
   examples: allExample {
+    edges {
+      node {
+        id
+        title
+        link
+        image
+        imageAlt
+      }
+    }
+  }
+  contributedProjects: allContributedProject {
     edges {
       node {
         id

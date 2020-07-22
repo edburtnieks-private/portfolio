@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Edgar Burtnieks',
-  siteDescription: 'Saving time for people by building easy to use interactions',
+  siteDescription: 'Full Stack Designer saving time by building easy-to-use web apps',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -20,6 +20,13 @@ module.exports = {
       options: {
         typeName: 'Post',
         path: 'content/posts/**/*.md'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'ContributedProject',
+        path: 'content/contributed-projects/**/*.md'
       }
     },
     {
