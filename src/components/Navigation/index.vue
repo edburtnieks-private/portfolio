@@ -41,7 +41,7 @@
 
       <li class="navigation-list-item">
         <a
-          href="Edgar Burtnieks (CV).pdf"
+          href="/Edgar Burtnieks (CV).pdf"
           target="_blank"
           rel="noopener noreferrer"
           class="link"
