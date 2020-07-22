@@ -47,16 +47,51 @@
     </div>
 
     <div class="submit-button-wrapper">
-      <button type="submit" class="submit-button">Send message</button>
+      <button
+        type="submit"
+        class="submit-button"
+        :class="{ sent: isDone, loading: isLoading, error: isError }"
+        :disabled="isError || isDone ||isLoading"
+      >
+        <span v-if="isError">
+          <CrossIcon />Error
+        </span>
+
+        <span v-else-if="isDone">
+          <CheckIcon />Message sent!
+        </span>
+
+        <span v-else-if="isLoading">
+          <LoaderIcon />Sending
+        </span>
+
+        <span v-else>
+          <SendIcon />Send a message
+        </span>
+      </button>
     </div>
   </form>
 </template>
 
 <script>
+import CrossIcon from "~/assets/icons/Cross";
+import CheckIcon from "~/assets/icons/Check";
+import LoaderIcon from "~/assets/icons/Loader";
+import SendIcon from "~/assets/icons/Send";
+
 export default {
+  components: {
+    CrossIcon,
+    CheckIcon,
+    LoaderIcon,
+    SendIcon,
+  },
   data() {
     return {
       formData: {},
+      isLoading: false,
+      isDone: false,
+      isError: false,
     };
   },
   methods: {
@@ -67,17 +102,28 @@ export default {
         )
         .join("&");
     },
-    handleSubmit(event) {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: this.encode({
-          "form-name": event.target.getAttribute("name"),
-          ...this.formData,
-        }),
-      })
-        .then(() => console.log("Form sent!"))
-        .catch((error) => console.error("Form error: ", error));
+    async handleSubmit(event) {
+      this.isLoading = true;
+
+      try {
+        await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: this.encode({
+            "form-name": event.target.getAttribute("name"),
+            ...this.formData,
+          }),
+        });
+        
+        this.isLoading = false;
+        this.isDone = true;
+      } catch (error) {
+        this.isError = true;
+        this.isLoading = false;
+        this.isDone = false;
+
+        console.error("Error while submitting the form: ", error);
+      }
     },
   },
 };
@@ -162,23 +208,62 @@ export default {
 }
 
 .submit-button {
-  background-color: var(--c-light);
-  border: 1px solid var(--c-light);
+  background-color: var(--c-primary-dark);
+  border: 2px solid var(--c-primary-dark);
   border-radius: 0.25rem;
-  color: var(--c-dark);
+  color: var(--c-light);
   font-weight: var(--fw-bold);
+  outline: 0;
   padding: 1rem 5rem;
-  transition: background-color 0.1s ease-in, color 0.1s ease-in;
+  transition: background-color 0.1s ease-in, color 0.1s ease-in,
+    border-color 0.1s ease-in;
   width: 100%;
 
   &:hover,
   &:focus {
-    background-color: var(--c-dark);
+    background-color: var(--c-light);
+    border-color: var(--c-light);
+    color: var(--c-dark);
+    transition: background-color 0.1s ease-out, color 0.1s ease-out,
+      border-color 0.1s ease-out;
+  }
+
+  &.sent {
+    background-color: var(--c-success);
+    border-color: var(--c-success);
     color: var(--c-light);
-    transition: background-color 0.1s ease-out, color 0.1s ease-out;
+    transition: background-color 0.2s ease-out, color 0.1s ease-out,
+      border-color 0.1s ease-out;
+  }
+
+  &.loading {
+    background-color: var(--c-primary-dark);
+    border-color: var(--c-primary-dark);
+    color: var(--c-light);
+    transition: background-color 0.2s ease-out, color 0.1s ease-out,
+      border-color 0.1s ease-out;
+  }
+
+  &.error {
+    background-color: var(--c-error);
+    border-color: var(--c-error);
+    color: var(--c-light);
+    transition: background-color 0.2s ease-out, color 0.1s ease-out,
+      border-color 0.1s ease-out;
+  }
+
+  span {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    svg {
+      margin-right: 1rem;
+    }
   }
 
   @media (min-width: 768px) {
+    min-width: 390px;
     width: auto;
   }
 }

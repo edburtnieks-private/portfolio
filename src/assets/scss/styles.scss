@@ -7,6 +7,9 @@
   --c-grey: #353535;
   --c-grey-light: #979797;
   --c-primary: #4D9DE0;
+  --c-primary-dark: #2A79BB;
+  --c-success: #1e9b52;
+  --c-error: #9b1e1e;
 
   // Font family
   --ff-body: 'Montserrat', sans-serif;
@@ -117,6 +120,10 @@ button {
   &:focus {
     outline: 2px dotted;
     outline-offset: 2px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
   }
 }
 
