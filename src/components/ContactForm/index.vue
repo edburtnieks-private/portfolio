@@ -19,7 +19,17 @@
     <div class="info">
       <div class="info-part">
         <label for="name" class="label">Name</label>
-        <input type="text" name="name" id="name" class="input text-input" v-model="formData.name" />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="input text-input"
+          :class="{error: errors.name}"
+          v-model="formData.name"
+          @input="onChange"
+          @blur="onChange"
+        />
+        <small v-if="errors.name" v-text="errors.name" class="error-message" />
       </div>
 
       <div class="info-part">
@@ -29,8 +39,12 @@
           name="email"
           id="email"
           class="input text-input"
+          :class="{error: errors.email}"
           v-model="formData.email"
+          @input="onChange"
+          @blur="onChange"
         />
+        <small v-if="errors.email" v-text="errors.email" class="error-message" />
       </div>
     </div>
 
@@ -42,8 +56,12 @@
         rows="5"
         cols="30"
         class="input textarea"
+        :class="{error: errors.message}"
         v-model="formData.message"
+        @input="onChange"
+        @blur="onChange"
       ></textarea>
+      <small v-if="errors.message" v-text="errors.message" class="error-message" />
     </div>
 
     <div class="submit-button-wrapper">
@@ -88,10 +106,15 @@ export default {
   },
   data() {
     return {
-      formData: {},
+      formData: {
+        name: "",
+        email: "",
+        message: "",
+      },
       isLoading: false,
       isDone: false,
       isError: false,
+      errors: {},
     };
   },
   methods: {
@@ -103,26 +126,80 @@ export default {
         .join("&");
     },
     async handleSubmit(event) {
-      this.isLoading = true;
+      const { errors, isValid } = this.validateForm(this.formData);
 
-      try {
-        await fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: this.encode({
-            "form-name": event.target.getAttribute("name"),
-            ...this.formData,
-          }),
-        });
-        
-        this.isLoading = false;
-        this.isDone = true;
-      } catch (error) {
-        this.isError = true;
-        this.isLoading = false;
-        this.isDone = false;
+      if (!isValid) {
+        this.errors = errors;
+      } else {
+        this.isLoading = true;
 
-        console.error("Error while submitting the form: ", error);
+        try {
+          await fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: this.encode({
+              "form-name": event.target.getAttribute("name"),
+              ...this.formData,
+            }),
+          });
+
+          this.isLoading = false;
+          this.isDone = true;
+        } catch (error) {
+          this.isError = true;
+          this.isLoading = false;
+          this.isDone = false;
+
+          console.error("Error while submitting the form: ", error);
+        }
+      }
+    },
+    validateForm(data) {
+      let errors = {};
+      let isValid = true;
+
+      for (const [key, value] of Object.entries(data)) {
+        const { message, isValid: isInputValid } = this.validateInput(
+          key,
+          value
+        );
+
+        if (!isInputValid) {
+          errors[key] = message;
+        }
+      }
+
+      if (Object.keys(errors).length > 0) isValid = false;
+
+      return {
+        errors,
+        isValid,
+      };
+    },
+    validateInput(field, value) {
+      let message = "";
+      let isValid = true;
+
+      if (value === "") {
+        message = `Please enter your ${field}`;
+        isValid = false;
+      }
+
+      return {
+        message,
+        isValid,
+      };
+    },
+    onChange(event) {
+      const { name: field, value } = event.target;
+      const { message, isValid } = this.validateInput(field, value);
+
+      if (!this.errors[field] && !isValid) {
+        this.$set(this.errors, field, message);
+      }
+
+      if (this.errors[field] && isValid) {
+        this.$delete(this.errors, field);
       }
     },
   },
@@ -136,6 +213,11 @@ export default {
   letter-spacing: 1px;
 }
 
+.info,
+.message-wrapper {
+  margin-bottom: 2.5rem;
+}
+
 .info {
   @media (min-width: 768px) {
     display: flex;
@@ -146,6 +228,22 @@ export default {
 .info-part,
 .input {
   width: 100%;
+}
+
+.info-part {
+  &:first-of-type {
+    margin-bottom: 2.5rem;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+      margin-right: 4rem;
+    }
+  }
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.75rem;
 }
 
 .input {
@@ -177,27 +275,16 @@ export default {
     padding-top: 1rem;
     resize: none;
   }
-}
 
-.info,
-.message-wrapper {
-  margin-bottom: 2.5rem;
-}
-
-.info-part {
-  &:first-of-type {
-    margin-bottom: 2.5rem;
-
-    @media (min-width: 768px) {
-      margin-bottom: 0;
-      margin-right: 4rem;
-    }
+  &.error {
+    border-color: var(--c-error);
   }
 }
 
-.label {
-  display: block;
-  margin-bottom: 0.75rem;
+.error-message {
+  color: var(--c-error);
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
 .submit-button-wrapper {
@@ -245,8 +332,8 @@ export default {
   }
 
   &.error {
-    background-color: var(--c-error);
-    border-color: var(--c-error);
+    background-color: var(--c-error-dark);
+    border-color: var(--c-error-dark);
     color: var(--c-light);
     transition: background-color 0.2s ease-out, color 0.1s ease-out,
       border-color 0.1s ease-out;
