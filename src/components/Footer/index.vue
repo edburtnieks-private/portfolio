@@ -3,6 +3,8 @@
     <footer>
       <ContactForm />
 
+      <p class="email">or use email edburtnieks@gmail.com</p>
+
       <div class="copyright">
         <small>&copy; Copyright 2020, {{ $static.metadata.siteName }}</small>
       </div>
@@ -23,6 +25,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.email {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .copyright {
   display: flex;
   justify-content: flex-end;
