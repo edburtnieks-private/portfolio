@@ -1,13 +1,13 @@
 <template>
-  <footer class="footer">
-    <Section id="contact" title="Hire me or send a message">
+  <Section id="contact" title="Hire me or send a message">
+    <footer>
       <ContactForm />
-    </Section>
 
-    <div class="copyright">
-      <small>&copy; Copyright 2020, {{ $static.metadata.siteName }}</small>
-    </div>
-  </footer>
+      <div class="copyright">
+        <small>&copy; Copyright 2020, {{ $static.metadata.siteName }}</small>
+      </div>
+    </footer>
+  </Section>
 </template>
 
 <script>
@@ -26,6 +26,7 @@ export default {
 .copyright {
   display: flex;
   justify-content: flex-end;
+  margin-top: 4rem;
 }
 </style>
 

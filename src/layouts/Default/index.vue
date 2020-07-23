@@ -10,9 +10,9 @@
       </main>
     </transition>
 
-    <Container withVerticalPadding class="page-footer-wrapper">
+    <div class="page-footer-wrapper">
       <Footer />
-    </Container>
+    </div>
   </div>
 </template>
 

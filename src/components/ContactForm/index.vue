@@ -214,7 +214,7 @@ export default {
   color: var(--c-light);
   font-weight: var(--fw-bold);
   outline: 0;
-  padding: 1rem 5rem;
+  padding: 1rem 0;
   transition: background-color 0.1s ease-in, color 0.1s ease-in,
     border-color 0.1s ease-in;
   width: 100%;
