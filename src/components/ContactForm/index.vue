@@ -24,7 +24,7 @@
           name="name"
           id="name"
           class="input text-input"
-          :class="{error: errors.name}"
+          :class="{error: errors.name, valid: valid.name}"
           v-model="formData.name"
           @input="onChange"
           @blur="onChange"
@@ -39,10 +39,11 @@
           name="email"
           id="email"
           class="input text-input"
-          :class="{error: errors.email}"
+          :class="{error: errors.email, valid: valid.email}"
           v-model="formData.email"
           @input="onChange"
           @blur="onChange"
+          @invalid.prevent
         />
         <small v-if="errors.email" v-text="errors.email" class="error-message" />
       </div>
@@ -56,7 +57,7 @@
         rows="5"
         cols="30"
         class="input textarea"
-        :class="{error: errors.message}"
+        :class="{error: errors.message, valid: valid.message}"
         v-model="formData.message"
         @input="onChange"
         @blur="onChange"
@@ -115,6 +116,7 @@ export default {
       isDone: false,
       isError: false,
       errors: {},
+      valid: {},
     };
   },
   methods: {
@@ -154,6 +156,22 @@ export default {
         }
       }
     },
+    onChange(event) {
+      const { name: field, value, validity } = event.target;
+      const { message, isValid } = this.validateInput(
+        field,
+        value,
+        validity.valid
+      );
+
+      if (!isValid) {
+        this.$set(this.errors, field, message);
+      }
+
+      if (isValid) {
+        this.$delete(this.errors, field);
+      }
+    },
     validateForm(data) {
       let errors = {};
       let isValid = true;
@@ -176,31 +194,30 @@ export default {
         isValid,
       };
     },
-    validateInput(field, value) {
+    validateInput(field, value, valid = true) {
       let message = "";
       let isValid = true;
 
       if (value === "") {
         message = `Please enter your ${field}`;
         isValid = false;
+        
+        if (this.valid[field]) this.valid[field] = false;
       }
+
+      if (field === "email" && !valid && value !== "") {
+        message = "Please enter a valid email";
+        isValid = false;
+
+        if (this.valid[field]) this.valid[field] = false;
+      }
+
+      if (isValid) this.valid[field] = true;
 
       return {
         message,
         isValid,
       };
-    },
-    onChange(event) {
-      const { name: field, value } = event.target;
-      const { message, isValid } = this.validateInput(field, value);
-
-      if (!this.errors[field] && !isValid) {
-        this.$set(this.errors, field, message);
-      }
-
-      if (this.errors[field] && isValid) {
-        this.$delete(this.errors, field);
-      }
     },
   },
 };
@@ -257,12 +274,12 @@ export default {
   outline: 0;
   padding-left: 1rem;
   padding-right: 1rem;
-  transition: border-color 0.1s ease-in;
+  transition: border-color 0.2s ease-in-out;
 
   &:hover,
   &:focus {
     border-color: var(--c-primary);
-    transition: border-color 0.1s ease-out;
+    transition: border-color 0.2s ease-in-out;
   }
 
   &.text-input {
@@ -276,8 +293,16 @@ export default {
     resize: none;
   }
 
-  &.error {
+  &.error,
+  &:invalid {
     border-color: var(--c-error);
+    box-shadow: none;
+    transition: border-color 0.2s ease-in-out;
+  }
+
+  &.valid {
+    border-color: var(--c-success);
+    transition: border-color 0.2s ease-in-out;
   }
 }
 
@@ -302,8 +327,8 @@ export default {
   font-weight: var(--fw-bold);
   outline: 0;
   padding: 1rem 0;
-  transition: background-color 0.1s ease-in, color 0.1s ease-in,
-    border-color 0.1s ease-in;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
   width: 100%;
 
   &:hover,
@@ -311,32 +336,32 @@ export default {
     background-color: var(--c-light);
     border-color: var(--c-light);
     color: var(--c-dark);
-    transition: background-color 0.1s ease-out, color 0.1s ease-out,
-      border-color 0.1s ease-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+      border-color 0.2s ease-in-out;
   }
 
   &.sent {
     background-color: var(--c-success);
     border-color: var(--c-success);
     color: var(--c-light);
-    transition: background-color 0.2s ease-out, color 0.1s ease-out,
-      border-color 0.1s ease-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+      border-color 0.2s ease-in-out;
   }
 
   &.loading {
     background-color: var(--c-primary-dark);
     border-color: var(--c-primary-dark);
     color: var(--c-light);
-    transition: background-color 0.2s ease-out, color 0.1s ease-out,
-      border-color 0.1s ease-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+      border-color 0.2s ease-in-out;
   }
 
   &.error {
     background-color: var(--c-error-dark);
     border-color: var(--c-error-dark);
     color: var(--c-light);
-    transition: background-color 0.2s ease-out, color 0.1s ease-out,
-      border-color 0.1s ease-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+      border-color 0.2s ease-in-out;
   }
 
   span {
