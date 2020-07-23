@@ -2,26 +2,20 @@
   <nav class="navigation">
     <ul class="navigation-list">
       <li class="navigation-list-item">
-        <g-link to="/" exact class="link">
-          <span class="text">
-            Home
-          </span>
+        <g-link to="/" :exact="$route.path === '/' ? false : true" class="link">
+          <span class="text">Home</span>
         </g-link>
       </li>
 
       <li class="navigation-list-item">
         <g-link to="/examples/" class="link">
-          <span class="text">
-            Examples
-          </span>
+          <span class="text">Examples</span>
         </g-link>
       </li>
 
       <li class="navigation-list-item">
         <g-link to="/blog/" class="link">
-          <span class="text">
-            Blog
-          </span>
+          <span class="text">Blog</span>
         </g-link>
       </li>
 
@@ -32,23 +26,14 @@
           rel="noopener noreferrer"
           class="link"
         >
-          <span class="text">
-            GitHub
-          </span>
+          <span class="text">GitHub</span>
           <ExternalLinkIcon class="external-link-icon" />
         </a>
       </li>
 
       <li class="navigation-list-item">
-        <a
-          href="/Edgar Burtnieks (CV).pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="link"
-        >
-          <span class="text">
-            Resume
-          </span>
+        <a href="/Edgar Burtnieks (CV).pdf" target="_blank" rel="noopener noreferrer" class="link">
+          <span class="text">Resume</span>
           <ExternalLinkIcon class="external-link-icon" />
         </a>
       </li>
@@ -61,8 +46,8 @@ import ExternalLinkIcon from "~/assets/icons/ExternalLink";
 
 export default {
   components: {
-    ExternalLinkIcon
-  }
+    ExternalLinkIcon,
+  },
 };
 </script>
 
@@ -119,7 +104,7 @@ export default {
 
 @media (min-width: 768px) {
   .link {
-    padding: 0.5rem 0.5rem; 
+    padding: 0.5rem 0.5rem;
 
     &.active::before {
       top: 0.6rem;
@@ -135,7 +120,7 @@ export default {
       .text::after {
         border-bottom: 2px dotted;
         bottom: -0.25rem;
-        content: '';
+        content: "";
         left: 0;
         position: absolute;
         right: 0;

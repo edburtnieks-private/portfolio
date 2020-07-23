@@ -16,15 +16,15 @@ import Skills from "~/page-components/Home/Skills";
 
 export default {
   metaInfo: {
-    title: "Full Stack Designer"
+    title: "Full Stack Designer",
   },
   components: {
     Section,
     Hero,
     Examples,
     ContributedProjects,
-    Skills
-  }
+    Skills,
+  },
 };
 </script>
 
