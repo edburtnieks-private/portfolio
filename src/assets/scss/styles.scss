@@ -7,6 +7,10 @@
   --c-grey: #353535;
   --c-grey-light: #979797;
   --c-primary: #4D9DE0;
+  --c-primary-dark: #2A79BB;
+  --c-success: #1e9b52;
+  --c-error: #ff6868;
+  --c-error-dark: #9b1e1e;
 
   // Font family
   --ff-body: 'Montserrat', sans-serif;
@@ -110,11 +114,17 @@ button {
   color: inherit;
   cursor: pointer;
   font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
   padding: 0;
 
   &:focus {
     outline: 2px dotted;
     outline-offset: 2px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
   }
 }
 
