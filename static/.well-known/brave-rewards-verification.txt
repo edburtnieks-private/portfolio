@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: edburtnieks.me
+Token: 01a2aeac637641e75b0dd5ab19aa829ffd3061ae297bb41e4b9f664557998e00
